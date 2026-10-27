@@ -92,6 +92,27 @@ section.block{padding:clamp(72px,11vw,128px) 0}
 .eyebrow::after{content:"";flex:0 0 48px;height:1px;background:currentColor;opacity:.6}
 h2.title{font:900 clamp(30px,4.6vw,48px)/1.25 var(--serif);margin:0 0 18px;letter-spacing:.04em}
 .lead{font-size:17px;color:var(--sumi-2);max-width:40em;margin:0}
+/* notes */
+.notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,24px);margin-top:40px;align-items:start}
+.ngrp{--gc:var(--momiji-d);background:var(--paper);border-radius:var(--r);border-top:4px solid var(--gc);box-shadow:0 1px 0 var(--line),0 18px 40px
+-28px rgba(60,30,10,.45);padding:18px 18px 8px}
+.ngrp.pre{--gc:var(--kuri)}
+.ngrp.tdy{--gc:var(--matsu)}
+.ngrp h3{display:flex;align-items:center;gap:8px;margin:0 0 4px;font:700 19px/1.4 var(--serif)}
+.ngrp h3 .ico{color:var(--gc)}
+.ngrp h3 .cnt{display:inline-block;margin-left:auto;padding:2px 9px;border-radius:999px;background:var(--gc);color:#fff;font:700 12px/1.5 var(--sans)}
+.ngrp ol{list-style:none;margin:0;padding:0}
+.ngrp li+li{border-top:1px dashed var(--line)}
+.ngrp a{display:grid;grid-template-columns:3.4em 1fr auto;gap:10px;align-items:start;min-height:44px;padding:12px 6px;border-radius:8px;
+text-decoration:none;color:var(--sumi);transition:background-color .2s var(--ease)}
+.ngrp a::after{content:"\203A";font-size:20px;line-height:1.1;color:var(--sumi-3);transition:transform .2s var(--ease)}
+.ngrp a:hover{background:var(--washi)}
+.ngrp a:hover::after{transform:translateX(3px)}
+.ngrp a:focus-visible{outline:2px solid var(--momiji);outline-offset:2px}
+.ngrp .nd{font:700 13.5px/1.6 var(--serif);color:var(--gc);white-space:nowrap}
+.ngrp b{display:block;font-size:15px;line-height:1.5}
+.ngrp small{display:block;margin-top:2px;font-size:13px;line-height:1.6;color:var(--sumi-3)}
+@media (max-width:900px){.notes-grid{grid-template-columns:1fr}}
 /* overview */
 .chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px);margin-top:48px}
 .chap{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 var(--line),0 18px 40px -28px rgba(60,30,10,.45);display:flex;
@@ -199,18 +220,30 @@ line-height:1.6}
 .tip .ico{color:var(--kaki);margin-top:2px}
 .tip.warn{background:#F6DCD3;color:#6A1E10}
 .tip.warn .ico{color:var(--momiji)}
-.plans{display:flex;flex-wrap:wrap;gap:4px;width:fit-content;max-width:100%;padding:4px;margin:12px 0 6px;border-radius:999px;
-background:var(--washi-2);border:1px solid var(--line)}
-.plans [role=tab]{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 9px;border:0;border-radius:999px;
-background:transparent;color:var(--sumi-2);font:700 14px/1.2 var(--sans);cursor:pointer;transition:background-color .2s var(--ease),color .2s
-var(--ease),box-shadow .2s var(--ease)}
-.plans [role=tab]:hover{color:var(--sumi)}
-.plans [aria-selected=true]{background:var(--paper);color:var(--momiji-d);box-shadow:0 1px 2px rgba(43,36,32,.12),0 3px 10px rgba(43,36,32,.08)}
-.plans [role=tab]:focus-visible{outline:2px solid var(--momiji);outline-offset:2px}
-.plans .pk{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--line);color:var(--sumi-2);font:800
-12.5px/1 var(--jp);transition:background-color .2s var(--ease),color .2s var(--ease)}
-.plans [aria-selected=true] .pk{background:var(--momiji);color:#fff}
+.plans-hd{display:flex;align-items:center;gap:8px;margin:16px 0 0;font:700 13.5px/1.4 var(--sans);color:var(--momiji-d)}
+.plans-hd svg{width:16px;height:16px;flex:none}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 6px}
+.plans [role=tab]{display:flex;align-items:flex-start;gap:10px;min-height:64px;padding:12px 14px;text-align:left;border:1.5px dashed var(--kaki);
+border-radius:14px;background:var(--paper);color:var(--sumi);font:inherit;cursor:pointer;transition:background-color .2s var(--ease),border-color .2s
+var(--ease),box-shadow .2s var(--ease),color .2s var(--ease)}
+.plans [role=tab]:hover{border-style:solid;background:#FBF1E6;box-shadow:0 2px 10px rgba(163,52,30,.12)}
+.plans [aria-selected=true],.plans [aria-selected=true]:hover{border:1.5px solid var(--momiji);background:var(--momiji);color:#fff;box-shadow:0 4px
+14px rgba(163,52,30,.28)}
+.plans [role=tab]:focus-visible{outline:2px solid var(--sumi);outline-offset:3px}
+.plans .pk{display:inline-grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:var(--kaki);color:#fff;font:800 13px/1
+var(--jp);transition:background-color .2s var(--ease),color .2s var(--ease)}
+.plans [aria-selected=true] .pk{background:#fff;color:var(--momiji)}
+.plans .pt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.plans .pt small{font:700 11px/1.3 var(--sans);letter-spacing:.12em;color:var(--momiji-d)}
+.plans .pt b{font:700 15.5px/1.35 var(--serif)}
+.plans .pt em{font-style:normal;font-size:12.5px;line-height:1.45;color:var(--sumi-3)}
+.plans [aria-selected=true] .pt small,.plans [aria-selected=true] .pt em{color:rgba(255,255,255,.88)}
 .plans-note{font-size:13px;color:var(--sumi-3);margin:0 0 6px}
+@media (max-width:560px){.plans{grid-template-columns:1fr}.plans [role=tab]{min-height:56px;padding:10px 12px}}
+.pill.ab{background:var(--momiji);color:#fff;border-color:var(--momiji)}
+.daynav a{position:relative}
+.daynav a .ab{position:absolute;top:-6px;right:-5px;z-index:1;padding:1px 4px;box-shadow:0 0 0 2px var(--washi);border-radius:6px;
+background:var(--momiji);color:#fff;font:800 9px/1.3 var(--sans);font-style:normal;letter-spacing:.02em}
 .pane:not([hidden]),.mset:not([hidden]){animation:paneIn .32s var(--ease)}
 @keyframes paneIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 /* night */
@@ -351,8 +384,8 @@ html{scroll-behavior:auto}
 .hero-bg img{transform:none}
 .js [data-rv]{opacity:1;transform:none}
 }
-@media print{#leaves,.ltoggle,.hdr,.daynav,.plans,.plans-note{display:none}.pane[hidden]{display:block!important}.hero{min-height:auto}.media{
-position:static}}
+@media print{#leaves,.ltoggle,.hdr,.daynav,.plans,.plans-hd,.plans-note{display:none}.pane[hidden]{display:block!important}.hero{min-height:auto}
+.media{position:static}}
 </style>
 </head>
 <body>
@@ -413,7 +446,7 @@ r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 1
 <div class="wrap">
 <a class="brand" href="#top" aria-label="紅葉の旅 回到頂端"><svg><use href="#i-momiji"/></svg><span>紅葉の旅</span></a>
 <nav class="nav" aria-label="主選單">
-<a href="#plan">行程</a><a href="#night">夜楓</a><a href="#move">交通</a><a href="#stay">住宿</a><a href="#todo">清單</a>
+<a href="#notes">提醒</a><a href="#plan">行程</a><a href="#night">夜楓</a><a href="#move">交通</a><a href="#stay">住宿</a><a href="#todo">清單</a>
 </nav>
 </div>
 </header>
@@ -435,6 +468,50 @@ r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 1
 <p class="credit-hero" data-cr="hero"></p>
 </section>
 <main id="main">
+<section class="block" id="notes" style="padding-bottom:0">
+<div class="wrap">
+<p class="eyebrow" data-rv>旅の心得</p>
+<h2 class="title" data-rv>出發前，先看這幾件事</h2>
+<p class="lead" data-rv>行程檢討的重點都整理在這裡，點任一條會跳到那一天的詳細說明；要勾選完成，請到最下面的「清單」。</p>
+<div class="notes-grid">
+<div class="ngrp ur" data-rv>
+<h3><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg>盡快處理<span class="cnt">4 項</span></h3>
+<ol>
+<li><a href="#d9"><span class="nd">11/25</span><span><b>嵐山小火車、祐齋亭</b><small>小火車 10/25 已開賣；祐齋亭只收網路預約。選 B 方案就不用<!--
+-->訂</small></span></a></li>
+<li><a href="#d6"><span class="nd">11/22</span><span><b>倉敷川遊船</b><small>10/23 已開放預約，紅葉季很快額滿</small></span></a></li>
+<li><a href="#d7"><span class="nd">11/23</span><span><b>Nozomi 劃位 ×3</b><small>已可劃位，先劃好三個座位</small></span></a></li>
+<li><a href="#d7"><span class="nd">11/23</span><span><b>大行李寄放方式</b><small>岡山站置物櫃最多放 3 天，放到 11/27 會超過；改帶去京都、宅配<!--
+-->，或找有人顧的寄放處</small></span></a></li>
+</ol>
+</div>
+<div class="ngrp pre" data-rv>
+<h3><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>出發前準備<span class="cnt">4 項</span></h3>
+<ol>
+<li><a href="#d4"><span class="nd">11/20</span><span><b>台灣駕照日文譯本</b><small>小豆島開車的人要帶日文譯本、台灣駕照、護照；國際駕照不適<!--
+-->用</small></span></a></li>
+<li><a href="#d5"><span class="nd">11/21</span><span><b>Hidaya 燒肉訂位</b><small>當天是週六，建議先訂位</small></span></a></li>
+<li><a href="#move"><span class="nd">Pass</span><span><b>JR Pass 啟用日</b><small>建議 11/23 – 11/27（票價為粗估，請用 JR 官網試算）；京<!--
+-->都&#x21d4;新大阪不在 Pass 範圍</small></span></a></li>
+<li><a href="#d9"><span class="nd">11/25</span><span><b>決定 A 或 B 方案</b><small>A 嵐山小火車／B 三千院＋貴船神社；貴船紅葉點燈只<!--
+-->到 11/24</small></span></a></li>
+</ol>
+</div>
+<div class="ngrp tdy" data-rv>
+<h3><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg>當天提醒<span class="cnt">4 項</span></h3>
+<ol>
+<li><a href="#d4"><span class="nd">11/20</span><span><b>趕栗林公園夜楓</b><small>18:30 回到高松，20:30 前要入園；先看夜楓再吃晚<!--
+-->餐</small></span></a></li>
+<li><a href="#d8"><span class="nd">11/24</span><span><b>清水寺早點到</b><small>6:00 開門，盡量 7:00 前到，避開人潮</small></span></a></li>
+<li><a href="#d8"><span class="nd">11/24</span><span><b>永觀堂夜間拜觀</b><small>不可預約，建議 17:00 前去排隊；晚上約 5 – 8°C，穿厚外<!--
+-->套</small></span></a></li>
+<li><a href="#d11"><span class="nd">11/27</span><span><b>回程早點出門</b><small>京都&#x21d4;新大阪不在 Pass 範圍：搭 JR 新快速到新大阪轉山陽<!--
+-->新幹線，約 8:15 要出門；或另補這段車票</small></span></a></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
 <section class="block" id="overview">
 <div class="wrap">
 <p class="eyebrow" data-rv>旅のしおり</p>
@@ -824,8 +901,8 @@ it:[['早上','bag','換飯店 SMART → Rakuten','先寄放行李再出門'],
 ['夜','moon','永觀堂 夜間拜觀','11/20 – 12/6，17:30 – 21:00，不可預約',0,'永観堂 禅林寺']],
 food:'壽喜燒',stay:'京都 Rakuten',
 tips:[['info','永觀堂夜間拜觀現場排隊，建議 17:00 前就去排。京都 11 月下旬晚上約 5 – 8°C，記得穿厚外套。']]},
-{c:'kyo',city:'嵐山／大原',date:'11/25',dow:'三',tag:['off','OFF'],opt:'嵐山小火車',t:'嵐山：小火車與常寂光寺',l:'搭嵯峨野小火車沿保津峽順流而下，' +
-'接著走常寂光寺、天龍寺，在嵯峨吃鰻魚飯。',p:['d9','d9b'],
+{c:'kyo',city:'嵐山／大原',date:'11/25',dow:'三',tag:['off','OFF'],opt:'嵐山小火車',sub:'保津峽・常寂光寺・天龍寺',t:'嵐山：小火車與常寂光寺',l:'搭' +
+'嵯峨野小火車沿保津峽順流而下，接著走常寂光寺、天龍寺，在嵯峨吃鰻魚飯。',p:['d9','d9b'],
 it:[['早上','train','JR 嵯峨野線 → 馬堀站','步行到トロッコ亀岡站'],
 ['9:30','train','嵐山小火車 龜岡 → 嵐山','11/25（三）有運行｜10/25 已開賣，盡快訂','todo',0,'https://www.sagano-kanko.co.jp/tc/'],
 ['上午','leaf','常寂光寺','',0,'常寂光寺'],
@@ -834,8 +911,8 @@ it:[['早上','train','JR 嵯峨野線 → 馬堀站','步行到トロッコ亀�
 ['下午','leaf','祐齋亭','秋季只能事先上網預約，現場不接受入場｜約 ¥2,000 – 3,000，12 歲以下不可入場','todo',0,'https://yusai.kyoto/']],
 food:'鰻魚飯',stay:'京都 Rakuten',
 tips:[['warn','小火車已在 10/25 開賣，紅葉季很快額滿；網路賣完時，車站還有少量當日票。祐齋亭秋季只能事先預約，兩個都要盡快訂。']],
-alt:{opt:'三千院＋貴船',t:'大原三千院與貴船神社',l:'往京都北邊的山裡走：上午在大原看三千院的苔庭與紅葉，下午搭叡山電車穿過「紅葉隧道」到貴船，沿貴' +
-'船川走到本宮與奧宮。',p:['d9c','d9d'],
+alt:{opt:'三千院＋貴船神社',sub:'大原・叡電紅葉隧道・貴船',t:'大原三千院與貴船神社',l:'往京都北邊的山裡走：上午在大原看三千院的苔庭與紅葉，下午搭' +
+'叡山電車穿過「紅葉隧道」到貴船，沿貴船川走到本宮與奧宮。',p:['d9c','d9d'],
 it:[['8:00','train','地鐵烏丸線 京都 → 國際會館','約 20 分'],
 ['8:25','bus','京都巴士 國際會館 → 大原','國際會館站 3 號乘車處，約 23 分，下車走 10 分｜或京都站 C3 搭 17 號直達，約 1 小時，紅葉季容易塞車'],
 ['9:00','tera','三千院','11 月 8:45 – 16:45｜¥700｜苔庭、往生極樂院、童地藏',0,0,'https://www.sanzenin.or.jp/'],
@@ -888,8 +965,9 @@ var tips=d.tips.map(function(t){return '<div class="tip'+(t[0]==='warn'?' warn':
 return '<h3 id="'+hid+'">'+d.t+'</h3><p class="lede">'+d.l+'</p><ol class="tl">'+d.it.map(item).join('')+'</ol>'+
 '<div class="meta"><div>'+ico('food')+'<span><em>餐食</em>'+d.food+'</span></div><div>'+ico('bed')+'<span><em>住宿</em>'+d.stay+
 '</span></div></div>'+tips;}
-function tab(id,k,label,on){return '<button type="button" role="tab" id="'+id+'-t'+k+'" aria-controls="'+id+'-p'+k+'" aria-selected="'+on+
-'" tabindex="'+(on?0:-1)+'" data-k="'+k+'"><span class="pk" aria-hidden="true">'+k.toUpperCase()+'</span>'+label+'</button>';}
+function tab(id,k,label,sub,on){return '<button type="button" role="tab" id="'+id+'-t'+k+'" aria-controls="'+id+'-p'+k+'" aria-selected="'+on+
+'" tabindex="'+(on?0:-1)+'" data-k="'+k+'"><span class="pk" aria-hidden="true">'+k.toUpperCase()+'</span><span class="pt"><small>'+k.toUpperCase()+
+' 方案</small><b>'+label+'</b><em>'+sub+'</em></span></button>';}
 var html='',nav='';
 DAYS.forEach(function(d,i){
 var n=i+1, id='d'+n;
@@ -897,12 +975,13 @@ if(CH[i]){var c=CH[i];html+='<header class="banner '+c[4]+
 '" data-rv><svg class="mj" aria-hidden="true"><use href="#i-momiji"/></svg><span class="no" aria-hidden="true">'+c[0]+'</span><div><span class="bd">'+
 c[2]+'</span><h2>'+c[1]+'</h2><p>'+c[3]+'</p></div></header>';}
 var pills='<span class="pill"><i class="dot" style="background:'+CITY[d.c]+'"></i>'+d.city+'</span>'+(d.tag?'<span class="pill '+d.tag[0]+'">'+
-d.tag[1]+'</span>':'');
+d.tag[1]+'</span>':'')+(d.alt?'<span class="pill ab">A／B 二選一</span>':'');
 var media,body;
 if(d.alt){var a=d.alt; a.stay=a.stay||d.stay;
 media='<div class="mset" id="'+id+'-ma">'+mset(d.p)+'</div><div class="mset" id="'+id+'-mb" hidden>'+mset(a.p)+'</div>';
-body='<div class="plans" role="tablist" aria-label="'+d.date+' 行程方案">'+tab(id,'a',d.opt,true)+tab(id,'b',a.opt,false)+'</div>'+
-'<p class="plans-note">兩個方案擇一，點選切換；選擇會記在這台裝置。</p>'+
+body='<p class="plans-hd">'+ico('alert')+'這天有 A、B 兩個方案，二選一：點方案卡切換行程</p>'+
+'<div class="plans" role="tablist" aria-label="'+d.date+' 行程方案">'+tab(id,'a',d.opt,d.sub,true)+tab(id,'b',a.opt,a.sub,false)+'</div>'+
+'<p class="plans-note">選擇會記在這台裝置；列印時兩個方案都會印出。</p>'+
 '<div class="pane" id="'+id+'-pa" role="tabpanel" aria-labelledby="'+id+'-ta">'+pane(d,id+'t')+'</div>'+
 '<div class="pane" id="'+id+'-pb" role="tabpanel" aria-labelledby="'+id+'-tb" hidden>'+pane(a,id+'tb')+'</div>';
 } else {media=mset(d.p); body=pane(d,id+'t');}
@@ -910,8 +989,8 @@ html+='<article class="day'+(i%2?' flip':'')+'" id="'+id+'" aria-labelledby="'+i
 '<div class="media" data-rv>'+media+'</div>'+
 '<div class="body" data-rv="2"><div class="day-hd"><span class="day-no">DAY '+(n<10?'0':'')+n+'</span><span class="day-date">'+d.date+'（'+d.dow+
 '）</span>'+pills+'</div>'+body+'</div></article>';
-nav+='<li><a href="#'+id+'" aria-label="DAY '+n+' '+d.date+' '+d.city+'"><b>'+d.date.split('/')[1]+'</b><span>'+d.dow+
-'</span><i style="background:'+CITY[d.c]+'"></i></a></li>';
+nav+='<li><a href="#'+id+'" aria-label="DAY '+n+' '+d.date+' '+d.city+(d.alt?'，有 A、B 兩個方案':'')+'"><b>'+d.date.split('/')[1]+'</b><span>'+
+d.dow+'</span>'+(d.alt?'<em class="ab" aria-hidden="true">A/B</em>':'')+'<i style="background:'+CITY[d.c]+'"></i></a></li>';
 });
 D.getElementById('days').innerHTML=html;
 var navOl=D.getElementById('daynav'); navOl.innerHTML=nav;
