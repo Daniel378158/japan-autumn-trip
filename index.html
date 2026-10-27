@@ -199,6 +199,20 @@ line-height:1.6}
 .tip .ico{color:var(--kaki);margin-top:2px}
 .tip.warn{background:#F6DCD3;color:#6A1E10}
 .tip.warn .ico{color:var(--momiji)}
+.plans{display:flex;flex-wrap:wrap;gap:4px;width:fit-content;max-width:100%;padding:4px;margin:12px 0 6px;border-radius:999px;
+background:var(--washi-2);border:1px solid var(--line)}
+.plans [role=tab]{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 9px;border:0;border-radius:999px;
+background:transparent;color:var(--sumi-2);font:700 14px/1.2 var(--sans);cursor:pointer;transition:background-color .2s var(--ease),color .2s
+var(--ease),box-shadow .2s var(--ease)}
+.plans [role=tab]:hover{color:var(--sumi)}
+.plans [aria-selected=true]{background:var(--paper);color:var(--momiji-d);box-shadow:0 1px 2px rgba(43,36,32,.12),0 3px 10px rgba(43,36,32,.08)}
+.plans [role=tab]:focus-visible{outline:2px solid var(--momiji);outline-offset:2px}
+.plans .pk{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--line);color:var(--sumi-2);font:800
+12.5px/1 var(--jp);transition:background-color .2s var(--ease),color .2s var(--ease)}
+.plans [aria-selected=true] .pk{background:var(--momiji);color:#fff}
+.plans-note{font-size:13px;color:var(--sumi-3);margin:0 0 6px}
+.pane:not([hidden]),.mset:not([hidden]){animation:paneIn .32s var(--ease)}
+@keyframes paneIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 /* night */
 .night{background:radial-gradient(1200px 500px at 80% -10%,#3A3550 0,transparent 60%),linear-gradient(180deg,var(--yoru),#141722);color:var(--tsuki);
 position:relative;z-index:2}
@@ -272,6 +286,7 @@ transition:transform .2s var(--ease)}
 .chk .tw{display:inline-block;font-size:11px;font-weight:700;padding:0 7px;border-radius:999px;background:#E2E8F0;color:#2F4A63;margin-left:6px;
 text-decoration:none;vertical-align:1px}
 .chk .nw{background:#F6DCD3;color:var(--momiji-d)}
+.chk .ur{background:var(--momiji-d);color:#fff}
 .pass{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;white-space:nowrap}
 .pass.y{background:#E3EAD8;color:#3D4F2C}
 .pass.n{background:#F6DCD3;color:#6A1E10}
@@ -336,7 +351,8 @@ html{scroll-behavior:auto}
 .hero-bg img{transform:none}
 .js [data-rv]{opacity:1;transform:none}
 }
-@media print{#leaves,.ltoggle,.hdr,.daynav{display:none}.hero{min-height:auto}.media{position:static}}
+@media print{#leaves,.ltoggle,.hdr,.daynav,.plans,.plans-note{display:none}.pane[hidden]{display:block!important}.hero{min-height:auto}.media{
+position:static}}
 </style>
 </head>
 <body>
@@ -446,7 +462,7 @@ r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 1
 <div class="chap-body"><span class="chap-no" aria-hidden="true">参</span>
 <h3>姬路・京都</h3>
 <p class="when"><i class="dot" style="background:var(--c-kyo)"></i>11/23 – 11/27・4 晚</p>
-<ul><li>姬路城</li><li>清水寺</li><li>永觀堂</li><li>嵐山</li><li>天橋立</li></ul>
+<ul><li>姬路城</li><li>清水寺</li><li>永觀堂</li><li>嵐山／大原・貴船</li><li>天橋立</li></ul>
 </div>
 </a>
 </div>
@@ -521,9 +537,10 @@ class="pass n">京都–新大阪段不含</span></td></tr>
 <div class="tip warn"><svg class="ico"><use href="#i-alert"/></svg><span><b>京都&#x21d4;新大阪</b>屬 JR 東海的東海道新幹線，Pass 不能搭。兩種<!--
 -->解法：① 京都&#x21d4;新大阪改搭 JR 新快速（約 25 分，Pass 可搭），在新大阪轉山陽新幹線；② 另外補京都&#x21d4;新大阪的新幹線車票<!--
 -->。11/23、11/27 這兩段都要注意。</span></div>
-<div class="tip warn"><svg class="ico"><use href="#i-cal"/></svg><span><b>5 日 Pass 是連續 5 天</b>，但 JR 行程分布在 11/17 – 11/27，無法全<!--
--->部涵蓋。例如 11/21 – 11/25 啟用，可包到小火車、吉備線、倉敷、姬路、嵯峨野線；11/17 岡山 → 高松與 11/27 京都 → 岡山就要另外買票。啟用日請依實<!--
--->際行程決定。</span></div>
+<div class="tip warn"><svg class="ico"><use href="#i-cal"/></svg><span><b>建議 11/23 – 11/27 啟用。</b>Pass 是連續 5 天，涵蓋不<!--
+-->到 11/17 – 11/27 的所有 JR 段。粗估 11/21 – 11/25 啟用只能抵約 ¥10,000 – 11,000，比 Pass 的 ¥12,000 還少；改成 11/23 – 11/27 啟用，可包到姬<!--
+-->路、嵯峨野線與 11/27 回岡山，能抵約 ¥14,000 以上。11/17、11/21、11/22 的 JR 另外買票，約 ¥3,000。以上是粗估，買之前用 JR 官網試算確認<!--
+-->。</span></div>
 <div class="tip"><svg class="ico"><use href="#i-info"/></svg><span>Pass 指定席需在搭車前劃好。抵達第一天先劃 3 段；大件行李（三邊合計超<!--
 -->過 160 cm）上新幹線需要預約「特大行李放置處座位」。</span></div>
 </article>
@@ -559,7 +576,8 @@ class="pass n">京都–新大阪段不含</span></td></tr>
 </article>
 <article class="card" data-rv="2">
 <h3><svg class="ico"><use href="#i-bag"/></svg>行李寄放</h3>
-<p>11/21 到岡山先寄放行李再上吉備線；11/23 一件大行李留在岡山站，其餘帶到姬路站寄放；11/27 回岡山站取回再去機場。</p>
+<p>11/21 到岡山先寄放行李再上吉備線；11/23 其餘行李帶到姬路站寄放。PDF 原本打算把一件大行李放在岡山站到 11/27，但<b>岡山站置物櫃最多只能<!--
+-->放 3 天</b>，要改成帶去京都、宅配到京都飯店，或找有人顧、可以放比較久的寄放處。</p>
 </article>
 </div>
 </div>
@@ -595,7 +613,8 @@ href="#i-ext"/></svg></a>
 <div class="wrap">
 <p class="eyebrow" data-rv>じゅんび</p>
 <h2 class="title" data-rv>出發前清單</h2>
-<p class="lead" data-rv>預設勾選狀態依 PDF。勾選會存在這台裝置的瀏覽器裡；標示「台灣先訂」的項目建議出發前完成。</p>
+<p class="lead" data-rv>預設勾選狀態依 PDF。勾選會存在這台裝置的瀏覽器裡。標示「盡快」的是已經開放、很快會額滿的預約；標示「台灣先訂」的項目建<!--
+-->議出發前完成。</p>
 <div class="prog" data-rv>
 <div class="bar" role="progressbar" aria-label="清單完成度" aria-valuemin="0" aria-valuemax="100" id="bar"><i></i></div>
 <output id="pct" aria-live="polite">0%</output>
@@ -686,11 +705,19 @@ var PHOTOS={"hero":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7
 "29_-_DSC01596.JPG","w":4320,"h":3240,"lic":"CC0","art":"Daderot","page":"https://commons.wikimedia.org/wiki/File:December_view_-_Korakuen_(Okayama" +
 ")_-_DSC01596.JPG","title":"File:December view - Korakuen (Okayama) - DSC01596.JPG"},"n3":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thu" +
 "mb/d/d6/Zenrinji_Eikando_20161113-3.jpg/960px-Zenrinji_Eikando_20161113-3.jpg","w":5184,"h":3456,"lic":"CC BY-SA 4.0","art":"Suicasmo","page":"htt" +
-"ps://commons.wikimedia.org/wiki/File:Zenrinji_Eikando_20161113-3.jpg","title":"File:Zenrinji Eikando 20161113-3.jpg"}};
+"ps://commons.wikimedia.org/wiki/File:Zenrinji_Eikando_20161113-3.jpg","title":"File:Zenrinji Eikando 20161113-3.jpg"},"d9c":{"src":"https://thumb." +
+"wikimedia.org/wikipedia/commons/thumb/2/2a/Sanzen-in%2C_Approach_to_Sanzen-in_-1_%28November_2014%29_-_panoramio.jpg/1280px-Sanzen-in%2C_Approach_" +
+"to_Sanzen-in_-1_%28November_2014%29_-_panoramio.jpg","w":2048,"h":1365,"lic":"CC BY 3.0","art":"ttshr1970","page":"https://commons.wikimedia.org/w" +
+"iki/File:Sanzen-in,_Approach_to_Sanzen-in_-1_(November_2014)_-_panoramio.jpg","title":"File:Sanzen-in, Approach to Sanzen-in -1 (November 2014) - " +
+"panoramio.jpg"},"d9d":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Kifune-jinja_Shint%C3%B4_Shrine_-_First_torii_%28Ichi-no-to" +
+"rii%29.jpg/1280px-Kifune-jinja_Shint%C3%B4_Shrine_-_First_torii_%28Ichi-no-torii%29.jpg","w":4128,"h":3096,"lic":"CC BY-SA 4.0","art":"Yanajin33",
+"page":"https://commons.wikimedia.org/wiki/File:Kifune-jinja_Shint%C3%B4_Shrine_-_First_torii_(Ichi-no-torii).jpg","title":"File:Kifune-jinja Shint" +
+"ô Shrine - First torii (Ichi-no-torii).jpg"}};
 var ALT={hero:'京都永觀堂放生池畔的紅葉',ch1:'直島 Benesse House 面海景色',ch2:'岡山後樂園庭園景色',ch3:'京都東福寺紅葉',d1:'一碗讚岐烏龍麵',d2:'直' +
 '島宮浦港',d2b:'直島 Naoshima Pavilion',d3:'豐島美術館',d3b:'高松北濱 Alley 倉庫街',d4:'小豆島寒霞溪紅葉',d4b:'小豆島橄欖公園的白色風車',d5:'岡山後' +
 '樂園池畔',d5b:'吉備津彥神社拜殿',d6:'倉敷川與白壁倉庫',d6b:'倉敷美觀地區街景',d7:'秋天的姬路城',d8:'清水寺舞台',d8b:'京都二年坂石板路',d9:'常寂光' +
-'寺紅葉',d9b:'嵯峨野觀光小火車行經保津川橋',d10:'天橋立',d11:'岡山站的電車',n1:'秋天栗林公園池畔的紅葉',n2:'岡山後樂園',n3:'永觀堂夜間點燈的紅葉'};
+'寺紅葉',d9b:'嵯峨野觀光小火車行經保津川橋',d9c:'三千院參道的石碑與紅葉',d9d:'貴船神社一之鳥居旁的紅葉',d10:'天橋立',d11:'岡山站的電車',n1:'秋天栗' +
+'林公園池畔的紅葉',n2:'岡山後樂園',n3:'永觀堂夜間點燈的紅葉'};
 var used=[];
 function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function ico(n){return '<svg class="ico" aria-hidden="true"><use href="#i-'+n+'"/></svg>';}
@@ -727,8 +754,9 @@ it:[['8:12','ship','渡輪 高松港 → 直島','9:02 抵達宮浦港'],
 ['白天','art','草間彌生 紅南瓜・黃南瓜','紅南瓜在宮浦港，黃南瓜在 Benesse 一帶海邊',0,'直島 南瓜'],
 ['14:15','art','地中美術館','莫內《睡蓮》與 Turrell、De Maria','ok','地中美術館'],
 ['17:00','ship','渡輪回高松','']],
-food:'晚餐自由安排（PDF 未填）',stay:'高松',
-tips:[['warn','腳踏車預約 9:00 早於船到港 9:02，建議先跟 ougiya 說明會搭 8:12 那班船。']]},
+food:'晚餐未定，建議先訂位',stay:'高松',
+tips:[['warn','腳踏車預約 9:00 早於船到港 9:02，建議先跟 ougiya 說明會搭 8:12 那班船。'],['info','島上坡多、海風強，建議租電動腳踏車，並帶擋風外套' +
+'。']]},
 {c:'taka',city:'豐島',date:'11/19',dow:'四',t:'豐島美術館，傍晚北濱',l:'在豐島美術館看水滴在白色殼體裡流動，是這趟的重點之一。回高松後逛北濱倉庫街' +
 '，迎接羊加入。',p:['d3','d3b'],
 it:[['9:02','ship','高速船 高松 → 豐島','9:37 抵達'],
@@ -748,8 +776,9 @@ it:[['7:40','ship','高速船 高松 → 小豆島','8:15 抵達'],
 ['下午','leaf','橄欖公園','白色風車與橄欖林',0,'道の駅 小豆島オリーブ公園'],
 ['17:30','ship','渡輪回高松','18:30 抵達'],
 ['夜','moon','栗林公園 秋季夜間點燈','17:00 – 21:00，最後入園 20:30',0,'栗林公園']],
-food:'壽司',stay:'高松',
-tips:[['info','18:30 回到高松港，栗林公園 20:30 前入園即可。']]},
+food:'壽司（建議看完夜楓再吃）',stay:'高松',
+tips:[['warn','台灣駕照在日本開車要帶<b>日文譯本</b>（國際駕照不適用）。開車的人要帶日文譯本、台灣駕照、護照。'],['info','18:30 回到高松港，20:30 ' +
+'前要進栗林公園，時間很趕。建議先看夜楓，看完再吃壽司，或改成可以晚點入座的店。']]},
 {c:'oka',city:'岡山',date:'11/21',dow:'六',t:'吉備路與後樂園夜間',l:'搭麵包超人小火車回岡山，沿桃太郎線去吉備津彥神社，晚上走進後樂園的「秋之幻想庭' +
 '園」。',p:['d5','d5b'],
 it:[['9:13','train','瀨戶大橋麵包超人小火車 2 號','4 番月台，10:44 到岡山｜備案 9:23 Marine Liner 18 號（5 番月台，10:17 到）'],
@@ -758,7 +787,7 @@ it:[['9:13','train','瀨戶大橋麵包超人小火車 2 號','4 番月台，10:
 ['中午','tera','吉備津彥神社','最近的是備前一宮站，下一站是吉備津',0,'吉備津彦神社'],
 ['下午','train','JR 回岡山','15–16 點之間'],
 ['17:00','moon','後樂園「秋之幻想庭園」','11/20 – 11/29，17:00 – 20:30，最後入園 20:00',0,'岡山後楽園'],
-['20:15','food','Hidaya 燒肉 本町店','或 隠岐の島ラーメン 岡山駅前店','chk','ひだや 本町店 岡山']],
+['20:15','food','Hidaya 燒肉 本町店','週六晚上建議先訂位｜或 隠岐の島ラーメン 岡山駅前店','chk','ひだや 本町店 岡山']],
 food:'Hidaya 燒肉／隠岐の島ラーメン',stay:'岡山 Airbnb',tips:[]},
 {c:'oka',city:'倉敷',date:'11/22',dow:'日',tag:['yang','羊規劃'],t:'倉敷美觀地區',l:'白壁倉庫沿著倉敷川排開，柳樹與楓紅倒映在運河上，最適合慢慢走。',
 p:['d6','d6b'],
@@ -766,42 +795,64 @@ it:[['上午','train','JR 岡山 → 倉敷','約 15 分'],
 ['上午','walk','美觀地區・運河楓紅','',0,'倉敷美観地区'],
 ['12:00','food','懷石「和の心 今川」','PDF 寫已預約，但清單「餐廳訂位（羊）」尚未勾','chk','和の心 今川 倉敷'],
 ['下午','cafe','下午茶',''],
-['—','ship','倉敷川遊船','10/23 開放預約','todo',0,'https://kankou-kurashiki.jp/special/kawafune/']],
+['—','ship','倉敷川遊船','10/23 已開放預約，盡快訂','todo',0,'https://kankou-kurashiki.jp/special/kawafune/']],
 food:'和の心 今川（懷石）',stay:'岡山 Airbnb',
-tips:[['info','倉敷川遊船 10/23 開放預約，記得和羊確認由誰來訂。']]},
+tips:[['warn','倉敷川遊船 10/23 已開放預約，記得和羊確認由誰來訂。']]},
 {c:'kyo',city:'姬路 → 京都',date:'11/23',dow:'一',tag:['hol','勤勞感謝日'],t:'姬路城，傍晚進京都',l:'一早搭 Nozomi 到姬路看白鷺城，傍晚進京都，晚' +
 '上在河原町和 Chang Ally 會合。',p:['d7'],
-it:[['早上','bag','大行李寄放岡山站','一件留在岡山，11/27 回來取'],
-['8:07','train','Nozomi 82 號 岡山 → 姬路','23 番月台，8:26 到｜劃位 ×3'],
+it:[['早上','bag','大行李怎麼處理','岡山站置物櫃最多 3 天，放到 11/27 會超過','chk'],
+['8:07','train','Nozomi 82 號 岡山 → 姬路','23 番月台，8:26 到｜已可劃位 ×3（一個月前開放）'],
 ['到站','bag','姬路站寄放行李',''],
 ['10:00','tera','姬路城','10:00 – 10:30 入城','ok','姫路城'],
+['下午','leaf','好古園','姬路城旁的日式庭園，秋天有楓紅，可買姬路城＋好古園共通券',0,'好古園'],
 ['15:59','train','新幹線 姬路 → 京都','16:43 抵達｜新大阪–京都段 Pass 不含'],
 ['晚上','walk','河原町，與 Chang Ally 會合','',0,'河原町駅'],
 ['晚上','food','京もつ鍋 亀八 本店','',0,'京もつ鍋 亀八 本店']],
 food:'京もつ鍋 亀八 本店',stay:'京都 SMART',
-tips:[['warn','15:59 這班會經新大阪進京都；新大阪–京都屬東海道新幹線，Pass 不能用。可改在新大阪轉 JR 新快速（約 25 分），或另外補這段新幹線票。'],
-['info','姬路城門票已預約，國定假日人多，照預約時段入城。']]},
+tips:[['warn','<b>大行李不要放岡山站四天。</b>置物櫃最多放 3 天（含開始那天），超過會被移走另外保管、要額外付費。可以改成：① 帶去京都（新幹線預約' +
+'「特大行李放置處座位」）；② 宅配寄到京都飯店；③ 找有人顧的行李寄放處，先確認能放幾天。'],['warn','15:59 這班會經新大阪進京都；新大阪–京都屬東海' +
+'道新幹線，Pass 不能用。可改在新大阪轉 JR 新快速（約 25 分），或另外補這段新幹線票。'],['info','姬路城門票已預約，國定假日人多，照預約時段入城。']]},
 {c:'kyo',city:'京都',date:'11/24',dow:'二',t:'清水寺、祇園，夜訪永觀堂',l:'東山經典路線：清水舞台、二年坂三年坂，午餐壽喜燒。羊傍晚啟程回台，晚上留' +
 '給「紅葉的永觀堂」。',p:['d8','d8b'],
 it:[['早上','bag','換飯店 SMART → Rakuten','先寄放行李再出門'],
-['上午','tera','清水寺','',0,'清水寺'],
+['一早','tera','清水寺','6:00 開門，盡量 7:00 前到，避開紅葉季人潮',0,'清水寺'],
 ['上午','walk','二年坂・三年坂','',0,'二年坂'],
-['午餐','food','壽喜燒',''],
+['午餐','food','壽喜燒','羊的送別餐｜紅葉季建議先訂位','chk'],
 ['下午','walk','祇園・河原町','',0,'祇園 京都'],
 ['下午','cafe','鴨川邊喝咖啡','',0,'鴨川 四条大橋'],
-['18:55','plane','羊搭機返台',''],
+['18:55','plane','羊搭機返台','若從關西機場出發，約 15:30 要離開京都'],
 ['夜','moon','永觀堂 夜間拜觀','11/20 – 12/6，17:30 – 21:00，不可預約',0,'永観堂 禅林寺']],
-food:'壽喜燒',stay:'京都 Rakuten',tips:[]},
-{c:'kyo',city:'嵐山',date:'11/25',dow:'三',tag:['off','OFF'],t:'嵐山：小火車與常寂光寺',l:'搭嵯峨野小火車沿保津峽順流而下，接著走常寂光寺、天龍寺，' +
-'在嵯峨吃鰻魚飯。',p:['d9','d9b'],
+food:'壽喜燒',stay:'京都 Rakuten',
+tips:[['info','永觀堂夜間拜觀現場排隊，建議 17:00 前就去排。京都 11 月下旬晚上約 5 – 8°C，記得穿厚外套。']]},
+{c:'kyo',city:'嵐山／大原',date:'11/25',dow:'三',tag:['off','OFF'],opt:'嵐山小火車',t:'嵐山：小火車與常寂光寺',l:'搭嵯峨野小火車沿保津峽順流而下，' +
+'接著走常寂光寺、天龍寺，在嵯峨吃鰻魚飯。',p:['d9','d9b'],
 it:[['早上','train','JR 嵯峨野線 → 馬堀站','步行到トロッコ亀岡站'],
-['9:30','train','嵐山小火車 龜岡 → 嵐山','一個月前開放預約','todo','トロッコ亀岡駅'],
+['9:30','train','嵐山小火車 龜岡 → 嵐山','11/25（三）有運行｜10/25 已開賣，盡快訂','todo',0,'https://www.sagano-kanko.co.jp/tc/'],
 ['上午','leaf','常寂光寺','',0,'常寂光寺'],
 ['上午','tera','天龍寺','',0,'天龍寺'],
 ['13:00','food','鰻魚飯','終點站嵯峨附近'],
-['下午','leaf','祐齋亭','',0,'祐斎亭']],
+['下午','leaf','祐齋亭','秋季只能事先上網預約，現場不接受入場｜約 ¥2,000 – 3,000，12 歲以下不可入場','todo',0,'https://yusai.kyoto/']],
 food:'鰻魚飯',stay:'京都 Rakuten',
-tips:[['info','小火車一個月前開放預約，紅葉季很快額滿。祐齋亭可能需要事先預約，出發前查一下官網。']]},
+tips:[['warn','小火車已在 10/25 開賣，紅葉季很快額滿；網路賣完時，車站還有少量當日票。祐齋亭秋季只能事先預約，兩個都要盡快訂。']],
+alt:{opt:'三千院＋貴船',t:'大原三千院與貴船神社',l:'往京都北邊的山裡走：上午在大原看三千院的苔庭與紅葉，下午搭叡山電車穿過「紅葉隧道」到貴船，沿貴' +
+'船川走到本宮與奧宮。',p:['d9c','d9d'],
+it:[['8:00','train','地鐵烏丸線 京都 → 國際會館','約 20 分'],
+['8:25','bus','京都巴士 國際會館 → 大原','國際會館站 3 號乘車處，約 23 分，下車走 10 分｜或京都站 C3 搭 17 號直達，約 1 小時，紅葉季容易塞車'],
+['9:00','tera','三千院','11 月 8:45 – 16:45｜¥700｜苔庭、往生極樂院、童地藏',0,0,'https://www.sanzenin.or.jp/'],
+['上午','leaf','寶泉院（可選）','三千院旁，從室內看出去的「額緣庭園」',0,'宝泉院'],
+['12:00','food','大原午餐','參道上有湯豆腐、柴漬（紫蘇醃菜）的店'],
+['13:00','bus','京都巴士 大原 → 八瀬駅前','約 15 – 20 分，下車走到叡電八瀬比叡山口站'],
+['13:30','train','叡山電車 八瀬比叡山口 → 寶池 → 貴船口','在寶池轉鞍馬線；市原到二ノ瀬之間就是「紅葉隧道」，列車會減速慢慢開',0,0,'https://' +
+'eizandensha.co.jp/sightseeing/momiji/'],
+['14:10','bus','京都巴士 33 號 貴船口 → 貴船','約 5 分｜也可以沿貴船川走上去，約 30 分'],
+['14:20','spot','貴船神社 本宮','朱紅燈籠石階參道、水占卜籤｜6:00 – 20:00，免費',0,0,'https://kifunejinja.jp/'],
+['下午','tera','結社 → 奧宮','沿貴船川往上游走，本宮到奧宮約 15 分',0,'貴船神社 奥宮'],
+['17:00','train','叡山電車 貴船口 → 出町柳','天黑後的班次，紅葉隧道有點燈、車內會關燈｜出町柳轉京阪或公車回飯店']],
+food:'大原湯豆腐（午餐）',
+tips:[['warn','<b>貴船神社的紅葉點燈只到 11/24</b>，11/25 已經結束，所以白天去。叡山電車的「紅葉隧道」點燈到 12/6，回程挑天黑後（約 17:00 之後）' +
+'的車就看得到。'],
+['info','B 方案不搭 JR，這天用不到 Pass，也不用訂小火車和祐齋亭。叡山電車不在地鐵・巴士一日券範圍內，大原的京都巴士能不能用一日券，買之前先' +
+'確認。大原、貴船在山裡，比市區冷，帶厚外套。']]}},
 {c:'kyo',city:'天橋立',date:'11/26',dow:'四',t:'天橋立一日遊',l:'參加 Klook 一日遊，北上看日本三景之一的天橋立；回京都後喝中村藤吉、吃炭火串燒。',
 p:['d10'],
 it:[['9:00','bus','Klook 天橋立一日遊','京都站八條東口集合，約 18:00 回京都','todo',0,'https://www.klook.com/zh-TW/search/result/?query=%E5%A4%A9%' +
@@ -815,11 +866,12 @@ tips:[['info','PDF 沒有附 Klook 團號，訂之前確認集合點是八條東
 {c:'oka',city:'岡山 → 台北',date:'11/27',dow:'五',tag:['off','OFF'],t:'回岡山，搭機返台',l:'早上搭新幹線回岡山取行李，接機場巴士，15:25 起飛。',
 p:['d11'],
 it:[['9:02','train','新幹線 京都 → 岡山','10:05 抵達（¥7,140）｜備案 9:14 → 10:18'],
-['10:05','bag','岡山站取回大行李',''],
+['10:05','bag','取回大行李','依 11/23 選的寄放方式'],
 ['10:50','bus','機場巴士 → 岡山機場','西口 21 號，11:20 到｜最晚這班，12:55 只當緊急備案'],
 ['15:25','plane','起飛返台','']],
 food:'—',stay:'回家',
-tips:[['warn','京都–新大阪不在 Pass 範圍。改搭 JR 新快速到新大阪再轉山陽新幹線，要再提早約 30 分出門；或只補京都–新大阪這段車票。']]}
+tips:[['warn','京都–新大阪不在 Pass 範圍。若 Pass 在 11/23 – 11/27 啟用，改搭 JR 新快速到新大阪再轉山陽新幹線，大約 8:15 就要出門；或只補京都–' +
+'新大阪這段車票。']]}
 ];
 function item(x){
 var t=x[0],ic=x[1],ti=x[2],de=x[3],st=x[4],mq=x[5],url=x[6];
@@ -828,6 +880,16 @@ var title=href?'<a href="'+href+'" target="_blank" rel="noopener">'+ti+ico('ext'
 return '<li class="k-'+ic+'"><span class="tm">'+t+'</span><span class="ic">'+ico(ic)+'</span><div class="tx"><b>'+title+'</b>'+
 (st?'<span class="st '+(st==='ok'?'ok':'todo')+'">'+ST[st]+'</span>':'')+(de?'<small>'+de+'</small>':'')+'</div></li>';
 }
+function mset(ps){return '<div class="stack'+(ps[1]?'':' solo')+'"><figure class="ph main">'+img(ps[0])+'</figure>'+
+(ps[1]?'<figure class="ph sub">'+img(ps[1])+'</figure>':'')+'</div><p class="credits">照片：'+ps.map(credit).join('；')+'</p>';}
+function pane(d,hid){
+var tips=d.tips.map(function(t){return '<div class="tip'+(t[0]==='warn'?' warn':'')+'">'+ico(t[0]==='warn'?'alert':'info')+'<span>'+t[1]+'</span>' +
+'</div>';}).join('');
+return '<h3 id="'+hid+'">'+d.t+'</h3><p class="lede">'+d.l+'</p><ol class="tl">'+d.it.map(item).join('')+'</ol>'+
+'<div class="meta"><div>'+ico('food')+'<span><em>餐食</em>'+d.food+'</span></div><div>'+ico('bed')+'<span><em>住宿</em>'+d.stay+
+'</span></div></div>'+tips;}
+function tab(id,k,label,on){return '<button type="button" role="tab" id="'+id+'-t'+k+'" aria-controls="'+id+'-p'+k+'" aria-selected="'+on+
+'" tabindex="'+(on?0:-1)+'" data-k="'+k+'"><span class="pk" aria-hidden="true">'+k.toUpperCase()+'</span>'+label+'</button>';}
 var html='',nav='';
 DAYS.forEach(function(d,i){
 var n=i+1, id='d'+n;
@@ -836,21 +898,35 @@ if(CH[i]){var c=CH[i];html+='<header class="banner '+c[4]+
 c[2]+'</span><h2>'+c[1]+'</h2><p>'+c[3]+'</p></div></header>';}
 var pills='<span class="pill"><i class="dot" style="background:'+CITY[d.c]+'"></i>'+d.city+'</span>'+(d.tag?'<span class="pill '+d.tag[0]+'">'+
 d.tag[1]+'</span>':'');
-var tips=d.tips.map(function(t){return '<div class="tip'+(t[0]==='warn'?' warn':'')+'">'+ico(t[0]==='warn'?'alert':'info')+'<span>'+t[1]+'</span>' +
-'</div>';}).join('');
+var media,body;
+if(d.alt){var a=d.alt; a.stay=a.stay||d.stay;
+media='<div class="mset" id="'+id+'-ma">'+mset(d.p)+'</div><div class="mset" id="'+id+'-mb" hidden>'+mset(a.p)+'</div>';
+body='<div class="plans" role="tablist" aria-label="'+d.date+' 行程方案">'+tab(id,'a',d.opt,true)+tab(id,'b',a.opt,false)+'</div>'+
+'<p class="plans-note">兩個方案擇一，點選切換；選擇會記在這台裝置。</p>'+
+'<div class="pane" id="'+id+'-pa" role="tabpanel" aria-labelledby="'+id+'-ta">'+pane(d,id+'t')+'</div>'+
+'<div class="pane" id="'+id+'-pb" role="tabpanel" aria-labelledby="'+id+'-tb" hidden>'+pane(a,id+'tb')+'</div>';
+} else {media=mset(d.p); body=pane(d,id+'t');}
 html+='<article class="day'+(i%2?' flip':'')+'" id="'+id+'" aria-labelledby="'+id+'t">'+
-'<div class="media" data-rv><div class="stack'+(d.p[1]?'':' solo')+'"><figure class="ph main">'+img(d.p[0])+'</figure>'+
-(d.p[1]?'<figure class="ph sub">'+img(d.p[1])+'</figure>':'')+'</div><p class="credits">照片：'+d.p.map(credit).join('；')+'</p></div>'+
+'<div class="media" data-rv>'+media+'</div>'+
 '<div class="body" data-rv="2"><div class="day-hd"><span class="day-no">DAY '+(n<10?'0':'')+n+'</span><span class="day-date">'+d.date+'（'+d.dow+
-'）</span>'+pills+'</div>'+
-'<h3 id="'+id+'t">'+d.t+'</h3><p class="lede">'+d.l+'</p><ol class="tl">'+d.it.map(item).join('')+'</ol>'+
-'<div class="meta"><div>'+ico('food')+'<span><em>餐食</em>'+d.food+'</span></div><div>'+ico('bed')+'<span><em>住宿</em>'+d.stay+
-'</span></div></div>'+tips+'</div></article>';
+'）</span>'+pills+'</div>'+body+'</div></article>';
 nav+='<li><a href="#'+id+'" aria-label="DAY '+n+' '+d.date+' '+d.city+'"><b>'+d.date.split('/')[1]+'</b><span>'+d.dow+
 '</span><i style="background:'+CITY[d.c]+'"></i></a></li>';
 });
 D.getElementById('days').innerHTML=html;
 var navOl=D.getElementById('daynav'); navOl.innerHTML=nav;
+/* plan tabs */
+[].forEach.call(D.querySelectorAll('.plans'),function(tl){
+var id=tl.closest('.day').id,PK='autumn2026-plan-'+id;
+function sel(k,focus){['a','b'].forEach(function(x){var on=x===k,b=D.getElementById(id+'-t'+x);
+b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;D.getElementById(id+'-p'+x).hidden=!on;D.getElementById(id+'-m'+x).hidden=!on;if(on&&
+focus)b.focus();});
+try{localStorage.setItem(PK,k);}catch(e){}}
+tl.addEventListener('click',function(e){var b=e.target.closest('[role=tab]');if(b)sel(b.getAttribute('data-k'));});
+tl.addEventListener('keydown',function(e){var k=e.key;if(['ArrowLeft','ArrowRight','Home','End'].indexOf(k)<0)return;e.preventDefault();
+var cur=tl.querySelector('[aria-selected=true]').getAttribute('data-k');sel(k==='Home'?'a':k==='End'?'b':(cur==='a'?'b':'a'),true);});
+var sv=null;try{sv=localStorage.getItem(PK);}catch(e){} if(sv==='b')sel('b');
+});
 /* photo fade-in */
 [].forEach.call(D.querySelectorAll('img[data-l]'),function(im){
 function ok(){im.classList.add('ok');}
@@ -885,14 +961,16 @@ var GROUPS=[
 1]]],
 ['交通',[['t1','研究新幹線時間、JR',1],['t2','買關西廣域周遊券 5 日（KKday／Klook）',0,'tw'],['t3','抵達第一天先劃位（3 段）',0],['t4','大件行李（' +
 '三邊合計超過 160 cm）劃位',0],['t5','幫媽媽買西瓜卡',0],['t6','確認去回程機場巴士時間（11 月時刻表）',0],['t7','京都地鐵・巴士一日券（成人 ¥1,100）',
-0,'tw'],['t8','處理京都\u21d4新大阪段（Pass 不含）',0,'nw'],['t9','決定 Pass 啟用日，11/17、11/27 另外買票',0,'nw']]],
+0,'tw'],['t8','處理京都\u21d4新大阪段（Pass 不含）',0,'nw'],['t9','Pass 啟用日（建議 11/23 – 11/27），11/17、11/21、11/22 另外買票',0,'nw'],['t10',
+'11/23 Nozomi 劃位 ×3（已開放）',0,'ur'],['t11','大行李寄放方案（岡山站置物櫃最多 3 天）',0,'ur']]],
 ['四國・岡山',[['k1','研究跳島',1],['k2','直島腳踏車 ougiya 9:00',1],['k3','家計劃・南寺 10:15',1],['k4','地中美術館 14:15',1],['k5','豐島腳踏車 s' +
-'eitouchi 9:30',1],['k6','豐島美術館 12:00',1],['k7','小豆島行程含租車（羊）',1],['k8','倉敷一日遊安排（羊）',1],['k9','倉敷川遊船（羊，10/23 開放' +
-'預約）',0],['k10','姬路攻略與門票（羊）',1]]],
-['京都',[['q1','京都行程安排',0],['q2','Klook 天橋立一日遊',0,'tw'],['q3','嵐山小火車（一個月前開放）',0,'tw'],['q4','找吃的',0],['q5','餐廳訂位（' +
-'羊）',0]]]
+'eitouchi 9:30',1],['k6','豐島美術館 12:00',1],['k7','小豆島行程含租車（羊）',1],['k8','倉敷一日遊安排（羊）',1],['k9','倉敷川遊船（羊，10/23 已開' +
+'放）',0,'ur'],['k10','姬路攻略與門票（羊）',1],['k11','小豆島駕駛人：台灣駕照日文譯本',0,'nw'],['k12','Hidaya 燒肉 11/21 訂位',0,'nw']]],
+['京都',[['q1','京都行程安排',0],['q2','Klook 天橋立一日遊',0,'tw'],['q8','11/25 決定 A 嵐山 或 B 三千院＋貴船',0,'nw'],['q3','A：嵐山小火車 11/25' +
+'（10/25 已開賣）',0,'ur'],['q6','A：祐齋亭預約（秋季只能事先預約）',0,'ur'],['q7','11/18 晚餐、11/24 壽喜燒訂位',0,'nw'],['q4','找吃的',0],['q5',
+'餐廳訂位（羊）',0]]]
 ];
-var TAG={tw:['tw','台灣先訂'],nw:['tw nw','新增']};
+var TAG={tw:['tw','台灣先訂'],nw:['tw nw','新增'],ur:['tw ur','盡快']};
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||null;}catch(e){return null;}}
 function save(st){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
 var groupsEl=D.getElementById('groups'),bar=D.getElementById('bar'),pct=D.getElementById('pct');
