@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>紅葉の旅 2026｜高松・岡山・京都 11/17–11/27</title>
+<meta name="description" content="2026 秋季賞楓：高松跳島、岡山倉敷、姬路與京都，11/17–11/27 十一天行程。">
+<meta name="theme-color" content="#2B2420">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -52 100 104'%3E%3Cpath fill='%23A3341E' d='M0,-48 L8,
+-26 L22,-34 L18,-14 L40,-20 L30,-4 L46,4 L22,10 L26,24 L6,16 L2,40 L-2,40 L-6,16 L-26,24 L-22,10 L-46,4 L-30,-4 L-40,-20 L-18,-14 L-22,-34 L-8,
+-26 Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://thumb.wikimedia.org" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700;900&
+family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--washi:#F4EDE2; --washi-2:#ECE2D3; --paper:#FCF9F4; --line:#DCCFBE;
+--sumi:#2B2420; --sumi-2:#5A4C43; --sumi-3:#7A6B60;
+--momiji:#A3341E; --momiji-d:#7E2414; --kaki:#C8682A; --ichou:#C39A3A; --kuri:#6E4129; --matsu:#4B5B3D;
+--yoru:#1B1F2D; --yoru-2:#252A3B; --tsuki:#F2E7D0;
+--c-taka:#2F6E8C; --c-oka:#B5762A; --c-kyo:#A3341E;
+--serif:"Noto Serif TC","Shippori Mincho B1",serif;
+--jp:"Shippori Mincho B1","Noto Serif TC",serif;
+--sans:"Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+--r:14px; --ease:cubic-bezier(.2,.7,.2,1);
+--wrap:1160px; --gut:clamp(20px,5vw,48px); --hdr:60px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--washi);color:var(--sumi);font:400 16px/1.8 var(--sans);letter-spacing:.02em;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence ty\
+pe='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .25 0 0 0 .09 0\
+'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%}
+a{color:var(--momiji);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--momiji-d)}
+:focus-visible{outline:3px solid var(--ichou);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+main,footer,.hero-inner{position:relative;z-index:2}
+#leaves{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+/* header */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--hdr);display:flex;align-items:center;transition:background .35s var(--ease),
+box-shadow .35s var(--ease),color .35s}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;width:100%;gap:12px}
+.hdr{color:#fff}
+.hdr.solid{background:rgba(244,237,226,.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--sumi);box-shadow:0 1px 0
+var(--line)}
+.brand{display:flex;align-items:center;gap:8px;color:inherit;text-decoration:none;font:700 18px/1 var(--jp);letter-spacing:.12em;min-height:44px}
+.brand svg{width:22px;height:22px;fill:var(--momiji)}
+.hdr:not(.solid) .brand svg{fill:#F0B48A}
+.nav{display:flex;gap:2px}
+.nav a{color:inherit;text-decoration:none;font-size:14px;font-weight:500;padding:0 12px;min-height:44px;display:flex;align-items:center;
+border-radius:999px;transition:background .2s}
+.nav a:hover{background:rgba(163,52,30,.1)}
+.hdr:not(.solid) .nav a:hover{background:rgba(255,255,255,.15)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.1);animation:kb 18s var(--ease) forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,14,16,.55) 0,rgba(18,14,16,.08) 30%,rgba(18,14,
+16,.25) 55%,rgba(24,18,16,.88) 100%)}
+.hero-inner{width:100%;padding-bottom:clamp(48px,9vh,96px)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font:500 14px/1.4 var(--jp);letter-spacing:.3em;color:#F3D9B8}
+.kicker::before{content:"";width:36px;height:1px;background:currentColor}
+.hero h1{font:800 clamp(64px,13vw,150px)/1 var(--jp);letter-spacing:.08em;margin:.18em 0 .16em;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero h1 span{color:#F0B48A}
+.hero-sub{font:500 clamp(16px,2.2vw,21px)/1.7 var(--serif);margin:0;max-width:34em;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.route{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:22px 0 0;padding:0;list-style:none}
+.route li{display:flex;align-items:center;gap:10px;font:700 15px/1 var(--serif);letter-spacing:.1em}
+.route li+li::before{content:"";width:22px;height:1px;background:rgba(255,255,255,.6)}
+.facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.fact{padding:10px 16px;border:1px solid rgba(255,255,255,.35);border-radius:12px;background:rgba(20,16,16,.28);-webkit-backdrop-filter:blur(6px);
+backdrop-filter:blur(6px)}
+.fact b{display:block;font:700 24px/1.1 var(--serif)}
+.fact small{font-size:13px;opacity:.9}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;min-height:48px;padding:0 24px;border-radius:999px;background:#F4EDE2;
+color:var(--sumi);font-weight:700;text-decoration:none;transition:transform .25s var(--ease),background .25s}
+.cta:hover{background:#fff;color:var(--momiji-d);transform:translateY(-2px)}
+.vert{position:absolute;right:var(--gut);top:calc(var(--hdr) + 40px);writing-mode:vertical-rl;font:500 clamp(18px,2vw,24px)/1.9 var(--jp);
+letter-spacing:.5em;color:rgba(255,255,255,.88);text-shadow:0 2px 12px rgba(0,0,0,.5);margin:0}
+.credit-hero{position:absolute;left:var(--gut);bottom:12px;margin:0;font-size:11px;color:rgba(255,255,255,.7)}
+.credit-hero a{color:inherit}
+/* sections */
+section.block{padding:clamp(72px,11vw,128px) 0}
+.eyebrow{font:500 14px/1 var(--jp);letter-spacing:.35em;color:var(--momiji);display:flex;align-items:center;gap:12px;margin:0 0 14px}
+.eyebrow::after{content:"";flex:0 0 48px;height:1px;background:currentColor;opacity:.6}
+h2.title{font:900 clamp(30px,4.6vw,48px)/1.25 var(--serif);margin:0 0 18px;letter-spacing:.04em}
+.lead{font-size:17px;color:var(--sumi-2);max-width:40em;margin:0}
+/* overview */
+.chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px);margin-top:48px}
+.chap{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 var(--line),0 18px 40px -28px rgba(60,30,10,.45);display:flex;
+flex-direction:column;text-decoration:none;color:inherit;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.chap:hover{transform:translateY(-4px);box-shadow:0 1px 0 var(--line),0 26px 50px -28px rgba(60,30,10,.55);color:inherit}
+.chap .ph{aspect-ratio:16/10}
+.chap-body{padding:22px 24px 26px;position:relative;flex:1}
+.chap-no{position:absolute;right:20px;top:-38px;font:800 64px/1 var(--jp);color:var(--paper);text-shadow:0 2px 16px rgba(0,0,0,.35)}
+.chap h3{font:700 22px/1.4 var(--serif);margin:0 0 4px}
+.chap .when{font-size:14px;color:var(--sumi-2);display:flex;gap:8px;align-items:center}
+.chap ul{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.chap li{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--washi);color:var(--sumi-2)}
+.dot{width:10px;height:10px;border-radius:50%;flex:none;display:inline-block}
+.who{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.who div{display:flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(252,249,244,.7);
+font-size:14px;color:var(--sumi-2)}
+.who b{color:var(--sumi);font-weight:700}
+/* photo */
+.ph{position:relative;overflow:hidden;background:var(--washi-2);margin:0}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease),opacity .6s}
+.ph img[data-l]{opacity:0}
+.ph img.ok{opacity:1}
+a.chap:hover .ph img,.day:hover .ph.main img{transform:scale(1.035)}
+/* day nav */
+.itin{padding-bottom:clamp(48px,7vw,88px)}
+.daynav{position:sticky;top:var(--hdr);z-index:40;background:rgba(244,237,226,.93);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line)}
+.daynav ol{display:flex;gap:6px;margin:0 auto;padding:8px var(--gut);max-width:var(--wrap);list-style:none;overflow-x:auto;scrollbar-width:none}
+.daynav ol::-webkit-scrollbar{display:none}
+.daynav a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:56px;min-height:48px;padding:4px 8px;
+border-radius:10px;text-decoration:none;color:var(--sumi-2);font-size:12px;line-height:1.25;transition:background .2s,color .2s}
+.daynav a b{font:700 17px/1.1 var(--serif);color:var(--sumi)}
+.daynav a i{width:6px;height:6px;border-radius:50%;margin-top:3px;font-style:normal}
+.daynav a:hover{background:rgba(163,52,30,.08)}
+.daynav a[aria-current="true"]{background:var(--sumi);color:#EADBC6}
+.daynav a[aria-current="true"] b{color:#fff}
+/* chapter banner */
+.banner{position:relative;margin:clamp(56px,8vw,96px) 0 clamp(16px,3vw,28px);border-radius:calc(var(--r) + 4px);overflow:hidden;color:var(--tsuki);
+background:linear-gradient(120deg,var(--b1),var(--b2));display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(16px,3vw,
+36px);padding:clamp(26px,4vw,44px) clamp(24px,4vw,52px);isolation:isolate;box-shadow:0 24px 50px -30px rgba(40,15,5,.6)}
+.banner::before{content:"";position:absolute;inset:0;z-index:-1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' wi\
+dth='56' height='28' viewBox='0 0 56 28'%3E%3Cg fill='none' stroke='%23fff' stroke-opacity='.22'%3E%3Ccircle cx='28' cy='28' r='26'/%3E%3Ccircle cx='\
+28' cy='28' r='18'/%3E%3Ccircle cx='28' cy='28' r='10'/%3E%3Ccircle cx='0' cy='0' r='26'/%3E%3Ccircle cx='56' cy='0' r='26'/%3E%3Ccircle cx='0' cy='0\
+' r='18'/%3E%3Ccircle cx='56' cy='0' r='18'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='56' cy='0' r='10'/%3E%3C/g%3E%3C/svg%3E");
+background-size:56px 28px;-webkit-mask-image:linear-gradient(90deg,transparent 25%,#000 90%);mask-image:linear-gradient(90deg,transparent 25%,#000
+90%)}
+.banner .no{font:800 clamp(64px,9vw,108px)/1 var(--jp);color:#fff}
+.banner .bd{display:block;font:500 13px/1.4 var(--jp);letter-spacing:.3em;opacity:.85}
+.banner h2{font:900 clamp(24px,3.6vw,36px)/1.3 var(--serif);margin:6px 0 6px;color:#fff}
+.banner p{margin:0;font-size:15px;opacity:.92;max-width:34em}
+.banner svg.mj{position:absolute;right:-24px;bottom:-40px;width:200px;height:200px;fill:rgba(255,255,255,.08);transform:rotate(-18deg);z-index:-1}
+.banner.taka{--b1:#183445;--b2:#2F6E8C}.banner.oka{--b1:#4A3014;--b2:#94601F}.banner.kyo{--b1:#4E150D;--b2:#A3341E}
+/* day card */
+.days{list-style:none;margin:0;padding:0}
+.day{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);align-items:start;padding:clamp(28px,4vw,44px) 0;
+scroll-margin-top:calc(var(--hdr) + 80px)}
+.day+.day{border-top:1px dashed var(--line)}
+.day.flip .media{order:2}
+.media{position:sticky;top:calc(var(--hdr) + 84px)}
+.media .stack{position:relative;padding-bottom:18%}
+.ph.main{aspect-ratio:4/3;border-radius:var(--r);box-shadow:0 22px 44px -26px rgba(50,25,10,.55)}
+.ph.sub{position:absolute;right:-14px;bottom:0;width:46%;aspect-ratio:4/3;border-radius:10px;border:6px solid var(--paper);box-shadow:0 14px 30px
+-14px rgba(50,25,10,.5);transform:rotate(2.2deg)}
+.day.flip .ph.sub{right:auto;left:-14px;transform:rotate(-2.2deg)}
+.media .stack.solo{padding-bottom:0}
+.credits{font-size:11.5px;color:var(--sumi-3);margin-top:10px;line-height:1.6}
+.credits a{color:inherit}
+.day-hd{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:6px}
+.day-no{font:800 15px/1 var(--jp);letter-spacing:.2em;color:var(--momiji)}
+.day-date{font:700 15px/1 var(--serif);color:var(--sumi)}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;padding:4px 10px;border-radius:999px;background:var(--washi-2);
+color:var(--sumi-2);line-height:1.4}
+.pill.off{background:#E6EBDD;color:var(--matsu)}
+.pill.hol{background:#F6DCD3;color:var(--momiji-d)}
+.pill.yang{background:#F3E6C5;color:#7A5A12}
+.day h3{font:900 clamp(24px,3vw,32px)/1.35 var(--serif);margin:6px 0 10px;letter-spacing:.03em}
+.day .lede{color:var(--sumi-2);margin:0 0 22px}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:83px;top:10px;bottom:10px;width:1px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:64px 40px minmax(0,1fr);gap:0 0;align-items:start;padding:7px 0}
+.tm{font:700 14px/1.4 var(--serif);color:var(--sumi-2);padding-top:7px;text-align:right;padding-right:8px;font-variant-numeric:tabular-nums}
+.tl .ic{width:32px;height:32px;margin-left:4px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid var(--line);
+color:var(--sumi-2);position:relative;z-index:1}
+.tl .ic .ico{width:16px;height:16px}
+.tl li.k-moon .ic{background:var(--yoru);border-color:var(--yoru);color:#F0C27A}
+.tl li.k-food .ic,.tl li.k-cafe .ic{color:var(--kaki)}
+.tl li.k-spot .ic{color:var(--momiji)}
+.tl li.k-train .ic,.tl li.k-ship .ic,.tl li.k-bus .ic,.tl li.k-plane .ic{color:var(--c-taka)}
+.tx{padding:5px 0 0 6px}
+.tx b{font-weight:700}
+.tx b a{color:var(--sumi);text-decoration:underline;text-decoration-color:var(--line)}
+.tx b a:hover{color:var(--momiji);text-decoration-color:currentColor}
+.tx b a .ico{width:13px;height:13px;vertical-align:-1px;margin-left:3px;color:var(--sumi-3)}
+.tx small{display:block;font-size:13.5px;color:var(--sumi-2);line-height:1.65;margin-top:1px}
+.st{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:2px;letter-spacing:.04em}
+.st.ok{background:#E3EAD8;color:#3D4F2C}
+.st.todo{background:#FBE3CF;color:#8A3E0C}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.meta div{display:flex;gap:10px;padding:12px 14px;border-radius:12px;background:var(--paper);border:1px solid var(--line);font-size:14px;
+line-height:1.6}
+.meta .ico{color:var(--kaki);margin-top:2px}
+.meta div:last-child .ico{color:var(--c-taka)}
+.meta em{display:block;font-style:normal;font-size:12px;color:var(--sumi-3);letter-spacing:.1em}
+.tip{display:flex;gap:10px;margin-top:14px;padding:12px 14px;border-radius:12px;background:#F7E9D6;color:#5B3A1C;font-size:14px;line-height:1.7}
+.tip .ico{color:var(--kaki);margin-top:2px}
+.tip.warn{background:#F6DCD3;color:#6A1E10}
+.tip.warn .ico{color:var(--momiji)}
+/* night */
+.night{background:radial-gradient(1200px 500px at 80% -10%,#3A3550 0,transparent 60%),linear-gradient(180deg,var(--yoru),#141722);color:var(--tsuki);
+position:relative;z-index:2}
+.night .eyebrow{color:#F0C27A}
+.night .lead{color:#CFC4B1}
+.ncards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.ncard{background:var(--yoru-2);border-radius:var(--r);overflow:hidden;border:1px solid rgba(240,194,122,.16);display:flex;flex-direction:column}
+.ncard .ph{aspect-ratio:3/2;background:#111}
+.ncard .ph img{filter:saturate(1.08)}
+.ncard-b{padding:22px 22px 24px}
+.ncard h3{font:700 21px/1.4 var(--serif);margin:0 0 12px;color:#fff}
+.ncard dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+.ncard dt{color:#B9AD99}
+.ncard dd{margin:0;color:var(--tsuki)}
+.ncard .when{margin-top:16px;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:#1B1F2D;background:#F0C27A;
+border-radius:999px;padding:6px 14px;text-decoration:none;min-height:36px}
+.ncard .when:hover{background:#F6D49B;color:#1B1F2D}
+.ncard .cr{font-size:11px;color:#9C927F;padding:0 22px 14px}
+.ncard .cr a{color:inherit}
+.glow{position:absolute;width:6px;height:6px;border-radius:50%;background:#F0C27A;box-shadow:0 0 18px 6px rgba(240,194,122,.45);opacity:.6}
+/* transport */
+.tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:44px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,3vw,30px)}
+.card.wide{grid-column:1/-1}
+.card h3{display:flex;align-items:center;gap:10px;font:700 20px/1.4 var(--serif);margin:0 0 6px}
+.card h3 .ico{color:var(--momiji);width:22px;height:22px}
+.card > p{margin:0 0 14px;color:var(--sumi-2);font-size:14.5px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:12px;letter-spacing:.12em;color:var(--sumi-3);font-weight:500}
+.tbl td b{font-family:var(--serif);font-variant-numeric:tabular-nums}
+.tbl small{display:block;color:var(--sumi-2);font-size:12.5px}
+.tbl tr:last-child td{border-bottom:0}
+.scroll-x{overflow-x:auto}
+/* stay */
+.stays{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.stay{background:var(--paper);border-radius:var(--r);border:1px solid var(--line);padding:26px;position:relative;overflow:hidden}
+.stay::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+.stay .nights{font:800 44px/1 var(--jp);color:var(--c)}
+.stay .nights small{font:500 14px var(--sans);color:var(--sumi-2);margin-left:6px}
+.stay h3{font:700 21px/1.4 var(--serif);margin:12px 0 4px}
+.stay p{margin:0;font-size:14.5px;color:var(--sumi-2)}
+.stay ul{margin:12px 0 0;padding-left:18px;font-size:14px;color:var(--sumi-2)}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--sumi);
+color:var(--sumi);text-decoration:none;font-size:14px;font-weight:700;transition:background .2s,color .2s}
+.btn:hover{background:var(--sumi);color:var(--washi)}
+.btn .ico{width:16px;height:16px}
+/* checklist */
+.prog{display:flex;align-items:center;gap:18px;margin-top:32px;flex-wrap:wrap}
+.bar{flex:1;min-width:200px;height:10px;border-radius:999px;background:var(--washi-2);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ichou),var(--kaki),var(--momiji));border-radius:inherit;
+transition:width .6s var(--ease)}
+.prog output{font:700 20px/1 var(--serif);font-variant-numeric:tabular-nums}
+.reset{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--sumi-2);font:500 13px
+var(--sans);cursor:pointer}
+.reset:hover{border-color:var(--sumi-2);color:var(--sumi)}
+.groups{columns:2 340px;column-gap:24px;margin-top:28px}
+.grp{break-inside:avoid;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin:0 0 24px}
+.grp h3{font:700 18px/1.4 var(--serif);margin:0 0 8px;display:flex;justify-content:space-between;align-items:baseline}
+.grp h3 small{font:500 13px var(--sans);color:var(--sumi-3)}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:9px 0;cursor:pointer;min-height:44px;font-size:15px;line-height:1.6;border-top:1px solid
+rgba(220,207,190,.55)}
+.grp .chk:first-of-type{border-top:0}
+.chk input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin:2px 0 0;border:1.5px solid var(--sumi-3);border-radius:6px;
+background:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s}
+.chk input::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.2px 2.2px 0;transform:rotate(45deg) scale(0);margin-top:-3px;
+transition:transform .2s var(--ease)}
+.chk input:checked{background:var(--matsu);border-color:var(--matsu)}
+.chk input:checked::after{transform:rotate(45deg) scale(1)}
+.chk input:checked + span{color:var(--sumi-3);text-decoration:line-through;text-decoration-color:rgba(122,107,96,.6)}
+.chk .tw{display:inline-block;font-size:11px;font-weight:700;padding:0 7px;border-radius:999px;background:#E2E8F0;color:#2F4A63;margin-left:6px;
+text-decoration:none;vertical-align:1px}
+.chk .nw{background:#F6DCD3;color:var(--momiji-d)}
+.pass{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;white-space:nowrap}
+.pass.y{background:#E3EAD8;color:#3D4F2C}
+.pass.n{background:#F6DCD3;color:#6A1E10}
+.ph .fc{position:absolute;right:8px;bottom:6px;margin:0;font-size:10.5px;line-height:1.3;color:rgba(255,255,255,.9);text-shadow:0 1px 3px rgba(0,0,0,
+.85);max-width:90%;text-align:right}
+.ph .fc a{color:inherit;text-decoration:none}
+.ph .fc a:hover{text-decoration:underline}
+.ph.sub .fc{display:none}
+.chap .fc{right:auto;left:8px;text-align:left}
+/* footer */
+footer{background:var(--sumi);color:#CDBFAE;padding:64px 0 40px;font-size:13px;line-height:1.8}
+footer h2{font:700 20px/1.4 var(--jp);color:#fff;letter-spacing:.2em;margin:0 0 6px}
+footer a{color:#F0C9A6}
+footer ol{columns:2 300px;column-gap:32px;padding-left:18px;margin:16px 0 0}
+/* leaves toggle */
+.ltoggle{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 12px;
+border-radius:999px;border:1px solid rgba(43,36,32,.15);background:rgba(252,249,244,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+color:var(--sumi);font:500 13px var(--sans);cursor:pointer;box-shadow:0 8px 24px -12px rgba(0,0,0,.35);transition:transform .2s var(--ease)}
+.ltoggle:hover{transform:translateY(-2px)}
+.ltoggle svg.mp{width:18px;height:18px;fill:var(--momiji)}
+/* reveal */
+.js [data-rv]{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js [data-rv].in{opacity:1;transform:none}
+.js [data-rv="2"]{transition-delay:.12s}.js [data-rv="3"]{transition-delay:.24s}
+.hero-inner > *{animation:up 1.1s var(--ease) both}
+.hero-inner > :nth-child(2){animation-delay:.12s}.hero-inner > :nth-child(3){animation-delay:.24s}.hero-inner > :nth-child(4){animation-delay:.36s}
+.hero-inner > :nth-child(5){animation-delay:.48s}.hero-inner > :nth-child(6){animation-delay:.6s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (max-width:960px){
+.chapters,.ncards,.stays{grid-template-columns:1fr}
+.chapters{max-width:560px}
+.ncards,.stays{max-width:560px}
+.tgrid{grid-template-columns:minmax(0,1fr)}
+.day{grid-template-columns:1fr}
+.day.flip .media{order:0}
+.media{position:static}
+}
+@media (max-width:640px){
+.nav a{padding:0 9px;font-size:13px}
+.brand span{display:none}
+.vert{display:none}
+.meta{grid-template-columns:1fr}
+.tl::before{left:71px}
+.tl li{grid-template-columns:52px 40px minmax(0,1fr)}
+.tm{font-size:13px}
+.ph.sub{right:-6px;width:44%;border-width:4px}
+.day.flip .ph.sub{left:-6px}
+.fact b{font-size:20px}
+.chap-no{font-size:52px;top:-32px}
+.tbl.stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.tbl.stack tr{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.tbl.stack tr:last-child{border-bottom:0}
+.tbl.stack td{padding:0;border:0}
+.tbl.stack td:nth-child(1){font-family:var(--serif);font-weight:700;color:var(--beni)}
+.tbl.stack td:nth-child(4){grid-column:3;grid-row:1}
+.tbl.stack td:nth-child(2),.tbl.stack td:nth-child(3){grid-column:1/-1}
+.tbl.stack td:nth-child(3){color:var(--sumi-2)}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+.hero-bg img{transform:none}
+.js [data-rv]{opacity:1;transform:none}
+}
+@media print{#leaves,.ltoggle,.hdr,.daynav{display:none}.hero{min-height:auto}.media{position:static}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-momiji" viewBox="-50 -52 100 104"><path d="M0,-48 L8,-26 L22,-34 L18,-14 L40,-20 L30,-4 L46,4 L22,10 L26,24 L6,16 L2,40 L-2,40 L-6,16
+L-26,24 L-22,10 L-46,4 L-30,-4 L-40,-20 L-18,-14 L-22,-34 L-8,-26 Z"/><rect x="-1.6" y="30" width="3.2" height="20" rx="1.6"/></symbol>
+<symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8
+6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="i-train" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="3" rx="2"/><path d="M4 11h16M12 3v8M8 19l-2 3M18 22l-2-3M8 15h.01M16
+15h.01"/></symbol>
+<symbol id="i-ship" viewBox="0 0 24 24"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0
+1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6M12 10v4M12
+2v3"/></symbol>
+<symbol id="i-bus" viewBox="0 0 24 24"><path d="M8 6v6M15 6v6M2 12h19.6M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1
+6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></symbol>
+<symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16
+10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9
+17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+<symbol id="i-bike" viewBox="0 0 24 24"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path
+d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+<symbol id="i-cable" viewBox="0 0 24 24"><path d="M2 3l20 4M12 5v4"/><rect x="5" y="9" width="14" height="11" rx="2"/><path d="M5 14h14M9.7 9v5M14.3
+9v5"/></symbol>
+<symbol id="i-spot" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle
+cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-tera" viewBox="0 0 24 24"><path d="M2.5 5.5c3.2 1.3 15.8 1.3 19 0M4.5 10h15M7 6.6V21M17 6.6V21M12 6.9V10"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2
+21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+<symbol id="i-art" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".6"/><circle cx="17.5" cy="10.5" r=".6"/><circle cx="8.5" cy="7.5"
+r=".6"/><circle cx="6.5" cy="12.5" r=".6"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69
+0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z"/></symbol>
+<symbol id="i-walk" viewBox="0 0 24 24"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2
+8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4
+0ZM16 17h4M4 13h4"/></symbol>
+<symbol id="i-food" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0
+0v7"/></symbol>
+<symbol id="i-cafe" viewBox="0 0 24 24"><path d="M10 2v2M14 2v2M6 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1
+0 8h-1"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0
+1 2 2v14M10 20h4"/><circle cx="16" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></symbol>
+<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2
+2ZM13 5v2M13 17v2M13 11v2"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0
+0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4M12
+17h.01"/></symbol>
+<symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></symbol>
+</svg>
+<a class="sr" href="#plan">跳到行程</a>
+<canvas id="leaves" aria-hidden="true"></canvas>
+<header class="hdr" id="hdr">
+<div class="wrap">
+<a class="brand" href="#top" aria-label="紅葉の旅 回到頂端"><svg><use href="#i-momiji"/></svg><span>紅葉の旅</span></a>
+<nav class="nav" aria-label="主選單">
+<a href="#plan">行程</a><a href="#night">夜楓</a><a href="#move">交通</a><a href="#stay">住宿</a><a href="#todo">清單</a>
+</nav>
+</div>
+</header>
+<section class="hero" id="top">
+<div class="hero-bg" data-ph="hero" data-eager></div>
+<p class="vert" aria-hidden="true">秋深し&#x3000;錦の旅路</p>
+<div class="hero-inner wrap">
+<p class="kicker">2026 秋&#x3000;瀬戸内から京都へ</p>
+<h1>紅葉<span>の</span>旅</h1>
+<p class="hero-sub">從瀨戶內海的島嶼藝術，到岡山庭園與京都古寺的夜楓——十一天，跟著楓紅一路往東。</p>
+<ul class="route" aria-label="路線"><li>高松</li><li>岡山・倉敷</li><li>姬路</li><li>京都</li></ul>
+<div class="facts">
+<div class="fact"><b>11.17 – 11.27</b><small>11 天 10 夜</small></div>
+<div class="fact"><b>3 座島</b><small>直島・豐島・小豆島</small></div>
+<div class="fact"><b>3 場夜楓</b><small>栗林・後樂園・永觀堂</small></div>
+</div>
+<a class="cta" href="#plan">展開行程 <svg class="ico"><use href="#i-down"/></svg></a>
+</div>
+<p class="credit-hero" data-cr="hero"></p>
+</section>
+<main id="main">
+<section class="block" id="overview">
+<div class="wrap">
+<p class="eyebrow" data-rv>旅のしおり</p>
+<h2 class="title" data-rv>三段旅程，一路追楓</h2>
+<p class="lead" data-rv>前半在高松當基地跳島看藝術；中段住岡山，走吉備路與倉敷；最後四晚在京都，把握紅葉最盛的時節。</p>
+<div class="chapters">
+<a class="chap" href="#d1" data-rv>
+<figure class="ph" data-ph="ch1"></figure>
+<div class="chap-body"><span class="chap-no" aria-hidden="true">壱</span>
+<h3>瀨戶內・高松</h3>
+<p class="when"><i class="dot" style="background:var(--c-taka)"></i>11/17 – 11/21・4 晚</p>
+<ul><li>直島</li><li>豐島</li><li>小豆島</li><li>栗林公園夜楓</li></ul>
+</div>
+</a>
+<a class="chap" href="#d5" data-rv="2">
+<figure class="ph" data-ph="ch2"></figure>
+<div class="chap-body"><span class="chap-no" aria-hidden="true">弐</span>
+<h3>岡山・倉敷</h3>
+<p class="when"><i class="dot" style="background:var(--c-oka)"></i>11/21 – 11/23・2 晚</p>
+<ul><li>吉備津彥神社</li><li>後樂園夜間</li><li>倉敷美觀地區</li></ul>
+</div>
+</a>
+<a class="chap" href="#d7" data-rv="3">
+<figure class="ph" data-ph="ch3"></figure>
+<div class="chap-body"><span class="chap-no" aria-hidden="true">参</span>
+<h3>姬路・京都</h3>
+<p class="when"><i class="dot" style="background:var(--c-kyo)"></i>11/23 – 11/27・4 晚</p>
+<ul><li>姬路城</li><li>清水寺</li><li>永觀堂</li><li>嵐山</li><li>天橋立</li></ul>
+</div>
+</a>
+</div>
+<div class="who" data-rv>
+<div><svg class="ico"><use href="#i-user"/></svg><span><b>我 ＋ 媽媽</b>&#x3000;全程</span></div>
+<div><svg class="ico"><use href="#i-user"/></svg><span><b>羊</b>&#x3000;11/19 晚 – 11/24 傍晚</span></div>
+<div><svg class="ico"><use href="#i-user"/></svg><span><b>Chang Ally</b>&#x3000;11/23 晚上河原町會合</span></div>
+</div>
+</div>
+</section>
+<div class="itin">
+<nav class="daynav" aria-label="日期導覽"><ol id="daynav"></ol></nav>
+<section id="plan" aria-label="每日行程">
+<div class="wrap" id="days"></div>
+</section>
+</div>
+<section class="block night" id="night">
+<div class="wrap">
+<p class="eyebrow" data-rv>夜もみじ</p>
+<h2 class="title" data-rv>三場夜楓</h2>
+<p class="lead" data-rv>這趟最奢侈的安排：高松、岡山、京都各留一晚給點燈的楓紅。</p>
+<div class="ncards">
+<article class="ncard" data-rv>
+<figure class="ph" data-ph="n1"></figure>
+<div class="ncard-b"><h3>栗林公園 秋季夜間點燈</h3>
+<dl><dt>日期</dt><dd>11/20（五）</dd><dt>時間</dt><dd>17:00 – 21:00</dd><dt>入園</dt><dd>最後 20:30</dd><dt>地點</dt><dd>高松</dd></dl>
+<a class="when" href="#d4">看 DAY 4</a></div>
+</article>
+<article class="ncard" data-rv="2">
+<figure class="ph" data-ph="n2"></figure>
+<div class="ncard-b"><h3>後樂園「秋之幻想庭園」</h3>
+<dl><dt>期間</dt><dd>11/20 – 11/29</dd><dt>時間</dt><dd>17:00 – 20:30</dd><dt>入園</dt><dd>最後 20:00</dd><dt>地點</dt><dd>岡山・11/21（六<!--
+-->）</dd></dl>
+<a class="when" href="#d5">看 DAY 5</a></div>
+</article>
+<article class="ncard" data-rv="3">
+<figure class="ph" data-ph="n3"></figure>
+<div class="ncard-b"><h3>永觀堂 夜間拜觀</h3>
+<dl><dt>期間</dt><dd>11/20 – 12/6</dd><dt>時間</dt><dd>17:30 – 21:00</dd><dt>預約</dt><dd>不可預約，現場排隊</dd><dt>地點</dt><dd>京都<!--
+-->・11/24（二）</dd></dl>
+<a class="when" href="#d8">看 DAY 8</a></div>
+</article>
+</div>
+</div>
+</section>
+<section class="block" id="move">
+<div class="wrap">
+<p class="eyebrow" data-rv>のりもの</p>
+<h2 class="title" data-rv>交通與劃位</h2>
+<p class="lead" data-rv>主力是 JR 關西廣域周遊券（5 日）。島嶼之間靠渡輪與高速船，抵達與離開都走岡山機場。</p>
+<div class="tgrid">
+<article class="card wide" data-rv>
+<h3><svg class="ico"><use href="#i-train"/></svg>JR 段與 Pass 適用</h3>
+<p>Pass 可搭山陽新幹線（新大阪&#x21d4;岡山）指定席、JR 西日本與 JR 四國在來線；<b>不含東海道新幹線（京都&#x21d4;新大阪）</b>。</p>
+<div class="scroll-x"><table class="tbl stack">
+<thead><tr><th>日期</th><th>班次</th><th>區間</th><th>Pass 路線</th></tr></thead>
+<tbody>
+<tr><td>11/17</td><td><b>16:42</b> JR</td><td>岡山 → 高松 17:36</td><td><span class="pass y">適用</span></td></tr>
+<tr><td>11/21</td><td><b>9:13</b> 瀨戶大橋麵包超人小火車 2 號<small>4 番月台｜備案 9:23 Marine Liner 18 號（5 番月台，10:17 到<!--
+-->）</small></td><td>高松 → 岡山 10:44</td><td><span class="pass y">適用</span></td></tr>
+<tr><td>11/21</td><td><b>11:12</b> 吉備線（桃太郎線）<small>10 番月台、往總社｜下一班 12:12</small></td><td>岡山 → 備前一<!--
+-->宮 11:23</td><td><span class="pass y">適用</span></td></tr>
+<tr><td>11/22</td><td>JR 約 15 分</td><td>岡山 &#x21c4; 倉敷</td><td><span class="pass y">適用</span></td></tr>
+<tr><td>11/23</td><td><b>8:07</b> Nozomi 82 號<small>23 番月台｜劃位 ×3</small></td><td>岡山 → 姬路 8:26</td><td><span class="pass y">適<!--
+-->用</span></td></tr>
+<tr><td>11/23</td><td><b>15:59</b> 新幹線</td><td>姬路 → 京都 16:43</td><td><span class="pass n">新大阪–京都段不含</span></td></tr>
+<tr><td>11/25</td><td>嵯峨野線</td><td>京都 → 馬堀</td><td><span class="pass y">適用</span></td></tr>
+<tr><td>11/27</td><td><b>9:02</b> 新幹線<small>¥7,140｜備案 9:14 → 10:18</small></td><td>京都 → 岡山 10:05</td><td><span
+class="pass n">京都–新大阪段不含</span></td></tr>
+</tbody>
+</table></div>
+<div class="tip warn"><svg class="ico"><use href="#i-alert"/></svg><span><b>京都&#x21d4;新大阪</b>屬 JR 東海的東海道新幹線，Pass 不能搭。兩種<!--
+-->解法：① 京都&#x21d4;新大阪改搭 JR 新快速（約 25 分，Pass 可搭），在新大阪轉山陽新幹線；② 另外補京都&#x21d4;新大阪的新幹線車票<!--
+-->。11/23、11/27 這兩段都要注意。</span></div>
+<div class="tip warn"><svg class="ico"><use href="#i-cal"/></svg><span><b>5 日 Pass 是連續 5 天</b>，但 JR 行程分布在 11/17 – 11/27，無法全<!--
+-->部涵蓋。例如 11/21 – 11/25 啟用，可包到小火車、吉備線、倉敷、姬路、嵯峨野線；11/17 岡山 → 高松與 11/27 京都 → 岡山就要另外買票。啟用日請依實<!--
+-->際行程決定。</span></div>
+<div class="tip"><svg class="ico"><use href="#i-info"/></svg><span>Pass 指定席需在搭車前劃好。抵達第一天先劃 3 段；大件行李（三邊合計超<!--
+-->過 160 cm）上新幹線需要預約「特大行李放置處座位」。</span></div>
+</article>
+<article class="card" data-rv>
+<h3><svg class="ico"><use href="#i-ship"/></svg>船班總表</h3>
+<div class="scroll-x"><table class="tbl">
+<thead><tr><th>日期</th><th>去程</th><th>回程</th></tr></thead>
+<tbody>
+<tr><td>11/18<small>直島</small></td><td><b>8:12</b> 渡輪<small>9:02 到宮浦港</small></td><td><b>17:00</b> 渡輪<small>回高松</small></td></tr>
+<tr><td>11/19<small>豐島</small></td><td><b>9:02</b> 高速船<small>9:37 到</small></td><td><b>15:10</b> 高速船<small>15:45 到高<!--
+-->松</small></td></tr>
+<tr><td>11/20<small>小豆島</small></td><td><b>7:40</b> 高速船<small>8:15 到</small></td><td><b>17:30</b> 渡輪<small>18:30 到高<!--
+-->松</small></td></tr>
+</tbody>
+</table></div>
+</article>
+<article class="card" data-rv="2">
+<h3><svg class="ico"><use href="#i-bus"/></svg>岡山機場巴士</h3>
+<div class="scroll-x"><table class="tbl">
+<thead><tr><th>方向</th><th>班次</th></tr></thead>
+<tbody>
+<tr><td>11/17 機場 → 岡山站</td><td><b>15:55</b> → 16:25<small>或 16:00 → 16:30（岡電）｜機場 2 號乘車處 → 岡山站西<!--
+-->口 21 號</small></td></tr>
+<tr><td>11/27 岡山站 → 機場</td><td><b>10:50</b> → 11:20（最晚這班）<small>西口 21 號｜12:55 → 13:25 只當緊急備案</small></td></tr>
+</tbody>
+</table></div>
+<div class="tip"><svg class="ico"><use href="#i-info"/></svg><span>手上時刻表是 2026/9/1 – 10/24 版，11 月班次出發前再確認。</span></div>
+</article>
+<article class="card" data-rv>
+<h3><svg class="ico"><use href="#i-ticket"/></svg>京都市內移動</h3>
+<p>地鐵・巴士一日券，成人 ¥1,100。清水寺、永觀堂這兩天最划算。</p>
+<p>幫媽媽準備一張西瓜卡（Suica）或 ICOCA，搭車、便利商店都能用。</p>
+</article>
+<article class="card" data-rv="2">
+<h3><svg class="ico"><use href="#i-bag"/></svg>行李寄放</h3>
+<p>11/21 到岡山先寄放行李再上吉備線；11/23 一件大行李留在岡山站，其餘帶到姬路站寄放；11/27 回岡山站取回再去機場。</p>
+</article>
+</div>
+</div>
+</section>
+<section class="block" id="stay" style="padding-top:0">
+<div class="wrap">
+<p class="eyebrow" data-rv>やど</p>
+<h2 class="title" data-rv>住宿</h2>
+<div class="stays">
+<article class="stay" style="--c:var(--c-taka)" data-rv>
+<div class="nights">4<small>晚</small></div>
+<h3>高松</h3><p>11/17 – 11/21</p>
+<ul><li>跳島基地，離高松港近最方便</li></ul>
+</article>
+<article class="stay" style="--c:var(--c-oka)" data-rv="2">
+<div class="nights">2<small>晚</small></div>
+<h3>岡山 Airbnb</h3><p>11/21 – 11/23</p>
+<ul><li>52 m²，北區</li><li>步行約 10 分到 JR 岡山站西口</li><li>正前方有便利商店、超市</li></ul>
+<a class="btn" href="https://www.airbnb.com.tw/rooms/1080718690720064888" target="_blank" rel="noopener">Airbnb 頁面 <svg class="ico"><use
+href="#i-ext"/></svg></a>
+</article>
+<article class="stay" style="--c:var(--c-kyo)" data-rv="3">
+<div class="nights">4<small>晚</small></div>
+<h3>京都</h3><p>11/23 – 11/27</p>
+<ul><li>11/23 – 24：SMART</li><li>11/24 – 27：Rakuten（11/24 換飯店）</li></ul>
+<a class="btn" href="https://www.booking.com/Share-lXDYo4" target="_blank" rel="noopener">Booking 頁面 <svg class="ico"><use
+href="#i-ext"/></svg></a>
+</article>
+</div>
+</div>
+</section>
+<section class="block" id="todo" style="padding-top:0">
+<div class="wrap">
+<p class="eyebrow" data-rv>じゅんび</p>
+<h2 class="title" data-rv>出發前清單</h2>
+<p class="lead" data-rv>預設勾選狀態依 PDF。勾選會存在這台裝置的瀏覽器裡；標示「台灣先訂」的項目建議出發前完成。</p>
+<div class="prog" data-rv>
+<div class="bar" role="progressbar" aria-label="清單完成度" aria-valuemin="0" aria-valuemax="100" id="bar"><i></i></div>
+<output id="pct" aria-live="polite">0%</output>
+<button type="button" class="reset" id="reset">還原為 PDF 狀態</button>
+</div>
+<div class="groups" id="groups"></div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<h2>紅葉の旅 2026</h2>
+<p>行程內容依「2026 日本」規劃 PDF 整理；Pass 適用範圍依 JR 西日本官方說明。各設施時間與班次請以出發前官方公告為準。</p>
+<p>照片來源：Wikimedia Commons，依各授權條款標示。</p>
+<ol id="credits"></ol>
+</div>
+</footer>
+<button type="button" class="ltoggle" id="ltoggle" aria-pressed="true"><svg class="mp"><use href="#i-momiji"/></svg><span>落葉 開</span><svg
+class="ico" style="width:16px;height:16px"><use href="#i-pause"/></svg></button>
+<script>
+(function(){
+"use strict";
+var D=document, root=D.documentElement; root.classList.add('js');
+var PHOTOS={"hero":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Eikando%2C_Kyoto_-_Eikando7378.jpg/1920px-Eikando%2C_Kyoto_-_Ei" +
+"kando7378.jpg","w":5098,"h":3399,"lic":"CC0","art":"lumoplank","page":"https://commons.wikimedia.org/wiki/File:Eikando,_Kyoto_-_Eikando7378.jpg",
+"title":"File:Eikando, Kyoto - Eikando7378.jpg"},"ch1":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/150505_Benesse_House_Museum" +
+"_Naoshima_Kagawa_pref_Japan01b3s5.jpg/1280px-150505_Benesse_House_Museum_Naoshima_Kagawa_pref_Japan01b3s5.jpg","w":6000,"h":4000,"lic":"CC BY 2.5",
+"art":"663highland","page":"https://commons.wikimedia.org/wiki/File:150505_Benesse_House_Museum_Naoshima_Kagawa_pref_Japan01b3s5.jpg","title":"File" +
+":150505 Benesse House Museum Naoshima Kagawa pref Japan01b3s5.jpg"},"ch2":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Decembe" +
+"r_view_-_Korakuen_%28Okayama%29_-_DSC01571.JPG/1280px-December_view_-_Korakuen_%28Okayama%29_-_DSC01571.JPG","w":4320,"h":3240,"lic":"CC0",
+"art":"Daderot","page":"https://commons.wikimedia.org/wiki/File:December_view_-_Korakuen_(Okayama)_-_DSC01571.JPG","title":"File:December view - Ko" +
+"rakuen (Okayama) - DSC01571.JPG"},"ch3":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Tofukuji-maple-autumn-2017-Luka-Peternel." +
+"jpg/1280px-Tofukuji-maple-autumn-2017-Luka-Peternel.jpg","w":5472,"h":3648,"lic":"CC BY-SA 4.0","art":"Luka Peternel","page":"https://commons.wiki" +
+"media.org/wiki/File:Tofukuji-maple-autumn-2017-Luka-Peternel.jpg","title":"File:Tofukuji-maple-autumn-2017-Luka-Peternel.jpg"},"d1":{"src":"https:" +
+"//thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Sanuki_udon_by_open-arms.jpg/1280px-Sanuki_udon_by_open-arms.jpg","w":3872,"h":2592,"lic":"CC B" +
+"Y 2.0","art":"open-arms","page":"https://commons.wikimedia.org/wiki/File:Sanuki_udon_by_open-arms.jpg","title":"File:Sanuki udon by open-arms.jpg"},
+"d2":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Miyanoura_port09s3200.jpg/1280px-Miyanoura_port09s3200.jpg","w":3872,"h":2592,
+"lic":"CC BY 2.5","art":"663highland","page":"https://commons.wikimedia.org/wiki/File:Miyanoura_port09s3200.jpg","title":"File:Miyanoura port09s320" +
+"0.jpg"},"d2b":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Naoshima_Pavilion_2.jpg/960px-Naoshima_Pavilion_2.jpg","w":6000,
+"h":4000,"lic":"CC BY-SA 4.0","art":"Bea Phi","page":"https://commons.wikimedia.org/wiki/File:Naoshima_Pavilion_2.jpg","title":"File:Naoshima Pavil" +
+"ion 2.jpg"},"d3":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Teshima_Art_Museum_06.jpg/1280px-Teshima_Art_Museum_06.jpg",
+"w":6000,"h":4000,"lic":"CC BY 2.0","art":"Kentaro Ohno","page":"https://commons.wikimedia.org/wiki/File:Teshima_Art_Museum_06.jpg","title":"File:T" +
+"eshima Art Museum 06.jpg"},"d3b":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Kitahama_alley02s3200.jpg/960px-Kitahama_alley02" +
+"s3200.jpg","w":3200,"h":2142,"lic":"CC BY 2.5","art":"663highland","page":"https://commons.wikimedia.org/wiki/File:Kitahama_alley02s3200.jpg",
+"title":"File:Kitahama alley02s3200.jpg"},"d4":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/201211Kankakei_Shodoshima_Kagawa_pr" +
+"ef_Japan07st.jpg/1280px-201211Kankakei_Shodoshima_Kagawa_pref_Japan07st.jpg","w":4500,"h":3000,"lic":"CC BY 2.5","art":"663highland","page":"https" +
+"://commons.wikimedia.org/wiki/File:201211Kankakei_Shodoshima_Kagawa_pref_Japan07st.jpg","title":"File:201211Kankakei Shodoshima Kagawa pref Japan0" +
+"7st.jpg"},"d4b":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Shodoshima_Olive_Park_Shodo_Island_Japan21bs3.jpg/960px-Shodoshim" +
+"a_Olive_Park_Shodo_Island_Japan21bs3.jpg","w":4800,"h":3200,"lic":"CC BY 2.5","art":"663highland","page":"https://commons.wikimedia.org/wiki/File:" +
+"Shodoshima_Olive_Park_Shodo_Island_Japan21bs3.jpg","title":"File:Shodoshima Olive Park Shodo Island Japan21bs3.jpg"},"d5":{"src":"https://thumb.wi" +
+"kimedia.org/wikipedia/commons/thumb/d/d2/Kako-no-ike_Pond_-_Korakuen_%28Okayama%29_-_DSC01540.JPG/1280px-Kako-no-ike_Pond_-_Korakuen_%28Okayama%29" +
+"_-_DSC01540.JPG","w":3375,"h":2490,"lic":"CC0","art":"Daderot","page":"https://commons.wikimedia.org/wiki/File:Kako-no-ike_Pond_-_Korakuen_(Okayam" +
+"a)_-_DSC01540.JPG","title":"File:Kako-no-ike Pond - Korakuen (Okayama) - DSC01540.JPG"},"d5b":{"src":"https://thumb.wikimedia.org/wikipedia/common" +
+"s/thumb/5/5a/Kibitsuhiko-jinja_haiden.JPG/960px-Kibitsuhiko-jinja_haiden.JPG","w":3638,"h":2724,"lic":"CC0","art":"Saigen Jiro","page":"https://co" +
+"mmons.wikimedia.org/wiki/File:Kibitsuhiko-jinja_haiden.JPG","title":"File:Kibitsuhiko-jinja haiden.JPG"},"d6":{"src":"https://thumb.wikimedia.org/" +
+"wikipedia/commons/thumb/3/32/%E5%80%89%E6%95%B7%E5%B7%9D_Kurashiki_Canal_-_panoramio_%281%29.jpg/1280px-%E5%80%89%E6%95%B7%E5%B7%9D_Kurashiki_Cana" +
+"l_-_panoramio_%281%29.jpg","w":3920,"h":2204,"lic":"CC BY 3.0","art":"lienyuan lee","page":"https://commons.wikimedia.org/wiki/File:%E5%80%89%E6%9" +
+"5%B7%E5%B7%9D_Kurashiki_Canal_-_panoramio_(1).jpg","title":"File:倉敷川 Kurashiki Canal - panoramio (1).jpg"},"d6b":{"src":"https://thumb.wikimedi" +
+"a.org/wikipedia/commons/thumb/d/d4/Kurashiki_Bikan_historical_quarter_20190324-2.jpg/960px-Kurashiki_Bikan_historical_quarter_20190324-2.jpg",
+"w":5184,"h":3456,"lic":"CC BY-SA 4.0","art":"Suicasmo","page":"https://commons.wikimedia.org/wiki/File:Kurashiki_Bikan_historical_quarter_20190324" +
+"-2.jpg","title":"File:Kurashiki Bikan historical quarter 20190324-2.jpg"},"d7":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Hi" +
+"meji_Castle_No09_029.jpg/1280px-Himeji_Castle_No09_029.jpg","w":3456,"h":2304,"lic":"CC BY 3.0","art":"Corpse Reviver","page":"https://commons.wik" +
+"imedia.org/wiki/File:Himeji_Castle_No09_029.jpg","title":"File:Himeji Castle No09 029.jpg"},"d8":{"src":"https://thumb.wikimedia.org/wikipedia/com" +
+"mons/thumb/8/83/Kiyomizu-dera%2C_Kyoto%2C_November_2016_-01.jpg/1280px-Kiyomizu-dera%2C_Kyoto%2C_November_2016_-01.jpg","w":5852,"h":3601,"lic":"C" +
+"C BY-SA 4.0","art":"Martin Falbisoner","page":"https://commons.wikimedia.org/wiki/File:Kiyomizu-dera,_Kyoto,_November_2016_-01.jpg","title":"File:" +
+"Kiyomizu-dera, Kyoto, November 2016 -01.jpg"},"d8b":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Pedestrian_road_with_pavement" +
+"s_and_paper_umbrellas%2C_Higashiyama-ku%2C_Kyoto%2C_Japan%2C_early_morning.jpg/960px-Pedestrian_road_with_pavements_and_paper_umbrellas%2C_Higashi" +
+"yama-ku%2C_Kyoto%2C_Japan%2C_early_morning.jpg","w":6438,"h":4292,"lic":"CC BY-SA 4.0","art":"Basile Morin","page":"https://commons.wikimedia.org/" +
+"wiki/File:Pedestrian_road_with_pavements_and_paper_umbrellas,_Higashiyama-ku,_Kyoto,_Japan,_early_morning.jpg","title":"File:Pedestrian road with " +
+"pavements and paper umbrellas, Higashiyama-ku, Kyoto, Japan, early morning.jpg"},"d9":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/" +
+"d/df/Jojakkoji_Kyoto04s3s4440.jpg/1280px-Jojakkoji_Kyoto04s3s4440.jpg","w":4440,"h":2960,"lic":"CC BY 2.5","art":"663highland","page":"https://com" +
+"mons.wikimedia.org/wiki/File:Jojakkoji_Kyoto04s3s4440.jpg","title":"File:Jojakkoji Kyoto04s3s4440.jpg"},"d9b":{"src":"https://thumb.wikimedia.org/" +
+"wikipedia/commons/thumb/1/18/Autumn_foliage_2012_%288252583379%29.jpg/960px-Autumn_foliage_2012_%288252583379%29.jpg","w":4928,"h":3264,"lic":"CC " +
+"BY 2.0","art":"Takeshi Kuboki from Amagasaki, Japan","page":"https://commons.wikimedia.org/wiki/File:Autumn_foliage_2012_(8252583379).jpg",
+"title":"File:Autumn foliage 2012 (8252583379).jpg"},"d10":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Amanohashidate_view_fro" +
+"m_Mt_Moju02s3s4592.jpg/1280px-Amanohashidate_view_from_Mt_Moju02s3s4592.jpg","w":4592,"h":3056,"lic":"CC BY 2.5","art":"663highland","page":"https" +
+"://commons.wikimedia.org/wiki/File:Amanohashidate_view_from_Mt_Moju02s3s4592.jpg","title":"File:Amanohashidate view from Mt Moju02s3s4592.jpg"},
+"d10b":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Funaya_in_Ine_Town%2C_Yosa_District%2C_Kyoto_Prefecture_005.jpg/960px-Funay" +
+"a_in_Ine_Town%2C_Yosa_District%2C_Kyoto_Prefecture_005.jpg","w":5405,"h":3603,"lic":"CC BY-SA 4.0","art":"Naokijp","page":"https://commons.wikimed" +
+"ia.org/wiki/File:Funaya_in_Ine_Town,_Yosa_District,_Kyoto_Prefecture_005.jpg","title":"File:Funaya in Ine Town, Yosa District, Kyoto Prefecture 00" +
+"5.jpg"},"d11":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Yellow_old_local_EMU_train_at_Okayama_station.jpg/1280px-Yellow_old" +
+"_local_EMU_train_at_Okayama_station.jpg","w":4608,"h":3072,"lic":"CC BY-SA 4.0","art":"Insightwm","page":"https://commons.wikimedia.org/wiki/File:" +
+"Yellow_old_local_EMU_train_at_Okayama_station.jpg","title":"File:Yellow old local EMU train at Okayama station.jpg"},"n1":{"src":"https://thumb.wi" +
+"kimedia.org/wikipedia/commons/thumb/7/70/Ritsurin_Garden%2C_Kagawa_Prefecture%3B_November_2019_%2801%29.jpg/960px-Ritsurin_Garden%2C_Kagawa_Prefec" +
+"ture%3B_November_2019_%2801%29.jpg","w":6000,"h":4000,"lic":"CC BY-SA 2.0","art":"Sei F","page":"https://commons.wikimedia.org/wiki/File:Ritsurin_" +
+"Garden,_Kagawa_Prefecture;_November_2019_(01).jpg","title":"File:Ritsurin Garden, Kagawa Prefecture; November 2019 (01).jpg"},"n2":{"src":"https:/" +
+"/thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/December_view_-_Korakuen_%28Okayama%29_-_DSC01596.JPG/960px-December_view_-_Korakuen_%28Okayama%" +
+"29_-_DSC01596.JPG","w":4320,"h":3240,"lic":"CC0","art":"Daderot","page":"https://commons.wikimedia.org/wiki/File:December_view_-_Korakuen_(Okayama" +
+")_-_DSC01596.JPG","title":"File:December view - Korakuen (Okayama) - DSC01596.JPG"},"n3":{"src":"https://thumb.wikimedia.org/wikipedia/commons/thu" +
+"mb/d/d6/Zenrinji_Eikando_20161113-3.jpg/960px-Zenrinji_Eikando_20161113-3.jpg","w":5184,"h":3456,"lic":"CC BY-SA 4.0","art":"Suicasmo","page":"htt" +
+"ps://commons.wikimedia.org/wiki/File:Zenrinji_Eikando_20161113-3.jpg","title":"File:Zenrinji Eikando 20161113-3.jpg"}};
+var ALT={hero:'京都永觀堂放生池畔的紅葉',ch1:'直島 Benesse House 面海景色',ch2:'岡山後樂園庭園景色',ch3:'京都東福寺紅葉',d1:'一碗讚岐烏龍麵',d2:'直' +
+'島宮浦港',d2b:'直島 Naoshima Pavilion',d3:'豐島美術館',d3b:'高松北濱 Alley 倉庫街',d4:'小豆島寒霞溪紅葉',d4b:'小豆島橄欖公園的白色風車',d5:'岡山後' +
+'樂園池畔',d5b:'吉備津彥神社拜殿',d6:'倉敷川與白壁倉庫',d6b:'倉敷美觀地區街景',d7:'秋天的姬路城',d8:'清水寺舞台',d8b:'京都二年坂石板路',d9:'常寂光' +
+'寺紅葉',d9b:'嵯峨野觀光小火車行經保津川橋',d10:'天橋立',d11:'岡山站的電車',n1:'秋天栗林公園池畔的紅葉',n2:'岡山後樂園',n3:'永觀堂夜間點燈的紅葉'};
+var used=[];
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function ico(n){return '<svg class="ico" aria-hidden="true"><use href="#i-'+n+'"/></svg>';}
+function credit(k){var p=PHOTOS[k]; if(used.indexOf(k)<0)used.push(k); return '<a href="'+p.page+'" target="_blank" rel="noopener">'+esc(p.art)+
+'</a>・'+p.lic;}
+function img(k,eager){var p=PHOTOS[k];return '<img src="'+p.src+'" alt="'+(ALT[k]||'')+'" width="'+p.w+'" height="'+p.h+'" decoding="async" '+
+(eager?'fetchpriority="high"':'loading="lazy" data-l')+'>';}
+function maps(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);}
+/* static photos */
+[].forEach.call(D.querySelectorAll('[data-ph]'),function(el){
+var k=el.getAttribute('data-ph');
+el.innerHTML=img(k,el.hasAttribute('data-eager'))+(k==='hero'?'':'<figcaption class="fc">© '+credit(k)+'</figcaption>');
+});
+D.querySelector('[data-cr="hero"]').innerHTML='封面：永觀堂｜© '+credit('hero');
+/* itinerary */
+var ST={ok:'已預約',todo:'待預約',chk:'待確認'};
+var CH={0:['壱','瀨戶內・高松','11/17 – 11/21','以高松為基地，搭船串起直島、豐島、小豆島三座島。','taka'],
+4:['弐','岡山・倉敷','11/21 – 11/23','吉備路的神社、後樂園的夜，與倉敷的白壁街道。','oka'],
+6:['参','姬路・京都','11/23 – 11/27','白鷺城之後，四晚京都，正逢紅葉最盛。','kyo']};
+var CITY={taka:'var(--c-taka)',oka:'var(--c-oka)',kyo:'var(--c-kyo)'};
+var DAYS=[
+{c:'taka',city:'高松',date:'11/17',dow:'二',t:'抵達岡山，跨海到高松',l:'午後降落岡山，搭巴士轉 JR 跨過瀨戶大橋，傍晚就能走進高松的商店街。',p:['d1'],
+it:[['14:35','plane','抵達岡山機場','入境、領行李'],
+['15:55','bus','機場巴士 → 岡山站','2 號乘車處上車，16:25 到岡山站西口 21 號｜或 16:00 岡電 → 16:30'],
+['16:42','train','JR 岡山 → 高松','17:36 抵達，途經瀨戶大橋'],
+['晚上','walk','高松市區散步','中央商店街一帶，順路吃晚餐',0,'高松中央商店街']],
+food:'讚岐烏龍麵（中央商店街）',stay:'高松',
+tips:[['info','機場巴士時刻為 2026/9/1 – 10/24 版，11 月班次出發前再確認。']]},
+{c:'taka',city:'直島',date:'11/18',dow:'三',t:'直島：南瓜與地中美術館',l:'第一座藝術島。騎腳踏車繞家計劃、看草間彌生的南瓜，下午把時間留給地中美術' +
+'館的自然光。',p:['d2','d2b'],
+it:[['8:12','ship','渡輪 高松港 → 直島','9:02 抵達宮浦港'],
+['9:00','bike','租腳踏車 ougiya','船 9:02 才到港，取車會晚幾分鐘','ok'],
+['10:15','tera','家計劃・南寺','安藤忠雄設計、James Turrell 的作品','ok','南寺 直島'],
+['白天','art','草間彌生 紅南瓜・黃南瓜','紅南瓜在宮浦港，黃南瓜在 Benesse 一帶海邊',0,'直島 南瓜'],
+['14:15','art','地中美術館','莫內《睡蓮》與 Turrell、De Maria','ok','地中美術館'],
+['17:00','ship','渡輪回高松','']],
+food:'晚餐自由安排（PDF 未填）',stay:'高松',
+tips:[['warn','腳踏車預約 9:00 早於船到港 9:02，建議先跟 ougiya 說明會搭 8:12 那班船。']]},
+{c:'taka',city:'豐島',date:'11/19',dow:'四',t:'豐島美術館，傍晚北濱',l:'在豐島美術館看水滴在白色殼體裡流動，是這趟的重點之一。回高松後逛北濱倉庫街' +
+'，迎接羊加入。',p:['d3','d3b'],
+it:[['9:02','ship','高速船 高松 → 豐島','9:37 抵達'],
+['9:30','bike','租腳踏車 seitouchi','船 9:37 才到，取車會稍晚','ok'],
+['12:00','art','豐島美術館','','ok','豊島美術館'],
+['下午','art','心臟音','Christian Boltanski 的心跳收藏館',0,'心臓音のアーカイブ'],
+['15:10','ship','高速船回高松','15:45 抵達'],
+['傍晚','walk','北濱 Alley','倉庫改建的小店與咖啡',0,'北浜alley 高松'],
+['17:55','plane','羊抵達，加入旅程','']],
+food:'骨付鳥',stay:'高松',
+tips:[['warn','腳踏車預約 9:30 早於船到港 9:37，記得先告知店家。']]},
+{c:'taka',city:'小豆島',date:'11/20',dow:'五',tag:['yang','羊規劃'],t:'小豆島自駕，夜訪栗林公園',l:'租車上寒霞溪看溪谷紅葉，再到橄欖公園吹海風；晚' +
+'上回高松，趕上栗林公園的夜間點燈。',p:['d4','d4b'],
+it:[['7:40','ship','高速船 高松 → 小豆島','8:15 抵達'],
+['8:15','car','租車自駕','羊已預約','ok'],
+['上午','cable','寒霞溪纜車','日本三大溪谷美之一，楓紅季的主角',0,'寒霞渓ロープウェイ'],
+['下午','leaf','橄欖公園','白色風車與橄欖林',0,'道の駅 小豆島オリーブ公園'],
+['17:30','ship','渡輪回高松','18:30 抵達'],
+['夜','moon','栗林公園 秋季夜間點燈','17:00 – 21:00，最後入園 20:30',0,'栗林公園']],
+food:'壽司',stay:'高松',
+tips:[['info','18:30 回到高松港，栗林公園 20:30 前入園即可。']]},
+{c:'oka',city:'岡山',date:'11/21',dow:'六',t:'吉備路與後樂園夜間',l:'搭麵包超人小火車回岡山，沿桃太郎線去吉備津彥神社，晚上走進後樂園的「秋之幻想庭' +
+'園」。',p:['d5','d5b'],
+it:[['9:13','train','瀨戶大橋麵包超人小火車 2 號','4 番月台，10:44 到岡山｜備案 9:23 Marine Liner 18 號（5 番月台，10:17 到）'],
+['到站','bag','岡山站寄放行李',''],
+['11:12','train','JR 吉備線（桃太郎線）','10 番月台、往總社，11:23 到｜下一班 12:12 → 12:26'],
+['中午','tera','吉備津彥神社','最近的是備前一宮站，下一站是吉備津',0,'吉備津彦神社'],
+['下午','train','JR 回岡山','15–16 點之間'],
+['17:00','moon','後樂園「秋之幻想庭園」','11/20 – 11/29，17:00 – 20:30，最後入園 20:00',0,'岡山後楽園'],
+['20:15','food','Hidaya 燒肉 本町店','或 隠岐の島ラーメン 岡山駅前店','chk','ひだや 本町店 岡山']],
+food:'Hidaya 燒肉／隠岐の島ラーメン',stay:'岡山 Airbnb',tips:[]},
+{c:'oka',city:'倉敷',date:'11/22',dow:'日',tag:['yang','羊規劃'],t:'倉敷美觀地區',l:'白壁倉庫沿著倉敷川排開，柳樹與楓紅倒映在運河上，最適合慢慢走。',
+p:['d6','d6b'],
+it:[['上午','train','JR 岡山 → 倉敷','約 15 分'],
+['上午','walk','美觀地區・運河楓紅','',0,'倉敷美観地区'],
+['12:00','food','懷石「和の心 今川」','PDF 寫已預約，但清單「餐廳訂位（羊）」尚未勾','chk','和の心 今川 倉敷'],
+['下午','cafe','下午茶',''],
+['—','ship','倉敷川遊船','10/23 開放預約','todo',0,'https://kankou-kurashiki.jp/special/kawafune/']],
+food:'和の心 今川（懷石）',stay:'岡山 Airbnb',
+tips:[['info','倉敷川遊船 10/23 開放預約，記得和羊確認由誰來訂。']]},
+{c:'kyo',city:'姬路 → 京都',date:'11/23',dow:'一',tag:['hol','勤勞感謝日'],t:'姬路城，傍晚進京都',l:'一早搭 Nozomi 到姬路看白鷺城，傍晚進京都，晚' +
+'上在河原町和 Chang Ally 會合。',p:['d7'],
+it:[['早上','bag','大行李寄放岡山站','一件留在岡山，11/27 回來取'],
+['8:07','train','Nozomi 82 號 岡山 → 姬路','23 番月台，8:26 到｜劃位 ×3'],
+['到站','bag','姬路站寄放行李',''],
+['10:00','tera','姬路城','10:00 – 10:30 入城','ok','姫路城'],
+['15:59','train','新幹線 姬路 → 京都','16:43 抵達｜新大阪–京都段 Pass 不含'],
+['晚上','walk','河原町，與 Chang Ally 會合','',0,'河原町駅'],
+['晚上','food','京もつ鍋 亀八 本店','',0,'京もつ鍋 亀八 本店']],
+food:'京もつ鍋 亀八 本店',stay:'京都 SMART',
+tips:[['warn','15:59 這班會經新大阪進京都；新大阪–京都屬東海道新幹線，Pass 不能用。可改在新大阪轉 JR 新快速（約 25 分），或另外補這段新幹線票。'],
+['info','姬路城門票已預約，國定假日人多，照預約時段入城。']]},
+{c:'kyo',city:'京都',date:'11/24',dow:'二',t:'清水寺、祇園，夜訪永觀堂',l:'東山經典路線：清水舞台、二年坂三年坂，午餐壽喜燒。羊傍晚啟程回台，晚上留' +
+'給「紅葉的永觀堂」。',p:['d8','d8b'],
+it:[['早上','bag','換飯店 SMART → Rakuten','先寄放行李再出門'],
+['上午','tera','清水寺','',0,'清水寺'],
+['上午','walk','二年坂・三年坂','',0,'二年坂'],
+['午餐','food','壽喜燒',''],
+['下午','walk','祇園・河原町','',0,'祇園 京都'],
+['下午','cafe','鴨川邊喝咖啡','',0,'鴨川 四条大橋'],
+['18:55','plane','羊搭機返台',''],
+['夜','moon','永觀堂 夜間拜觀','11/20 – 12/6，17:30 – 21:00，不可預約',0,'永観堂 禅林寺']],
+food:'壽喜燒',stay:'京都 Rakuten',tips:[]},
+{c:'kyo',city:'嵐山',date:'11/25',dow:'三',tag:['off','OFF'],t:'嵐山：小火車與常寂光寺',l:'搭嵯峨野小火車沿保津峽順流而下，接著走常寂光寺、天龍寺，' +
+'在嵯峨吃鰻魚飯。',p:['d9','d9b'],
+it:[['早上','train','JR 嵯峨野線 → 馬堀站','步行到トロッコ亀岡站'],
+['9:30','train','嵐山小火車 龜岡 → 嵐山','一個月前開放預約','todo','トロッコ亀岡駅'],
+['上午','leaf','常寂光寺','',0,'常寂光寺'],
+['上午','tera','天龍寺','',0,'天龍寺'],
+['13:00','food','鰻魚飯','終點站嵯峨附近'],
+['下午','leaf','祐齋亭','',0,'祐斎亭']],
+food:'鰻魚飯',stay:'京都 Rakuten',
+tips:[['info','小火車一個月前開放預約，紅葉季很快額滿。祐齋亭可能需要事先預約，出發前查一下官網。']]},
+{c:'kyo',city:'天橋立',date:'11/26',dow:'四',t:'天橋立一日遊',l:'參加 Klook 一日遊，北上看日本三景之一的天橋立；回京都後喝中村藤吉、吃炭火串燒。',
+p:['d10'],
+it:[['9:00','bus','Klook 天橋立一日遊','京都站八條東口集合，約 18:00 回京都','todo',0,'https://www.klook.com/zh-TW/search/result/?query=%E5%A4%A9%' +
+'E6%A9%8B%E7%AB%8B'],
+['白天','spot','天橋立','',0,'天橋立'],
+['18:00','bus','回到京都站',''],
+['晚上','cafe','中村藤吉 京都駅店','',0,'中村藤吉 京都駅店'],
+['晚上','food','炭串 まんてん 京都駅前店','',0,'炭串 まんてん 京都駅前店']],
+food:'炭串 まんてん',stay:'京都 Rakuten',
+tips:[['info','PDF 沒有附 Klook 團號，訂之前確認集合點是八條東口、時間 9:00 – 18:00。']]},
+{c:'oka',city:'岡山 → 台北',date:'11/27',dow:'五',tag:['off','OFF'],t:'回岡山，搭機返台',l:'早上搭新幹線回岡山取行李，接機場巴士，15:25 起飛。',
+p:['d11'],
+it:[['9:02','train','新幹線 京都 → 岡山','10:05 抵達（¥7,140）｜備案 9:14 → 10:18'],
+['10:05','bag','岡山站取回大行李',''],
+['10:50','bus','機場巴士 → 岡山機場','西口 21 號，11:20 到｜最晚這班，12:55 只當緊急備案'],
+['15:25','plane','起飛返台','']],
+food:'—',stay:'回家',
+tips:[['warn','京都–新大阪不在 Pass 範圍。改搭 JR 新快速到新大阪再轉山陽新幹線，要再提早約 30 分出門；或只補京都–新大阪這段車票。']]}
+];
+function item(x){
+var t=x[0],ic=x[1],ti=x[2],de=x[3],st=x[4],mq=x[5],url=x[6];
+var href=url||(mq?maps(mq):'');
+var title=href?'<a href="'+href+'" target="_blank" rel="noopener">'+ti+ico('ext')+'</a>':ti;
+return '<li class="k-'+ic+'"><span class="tm">'+t+'</span><span class="ic">'+ico(ic)+'</span><div class="tx"><b>'+title+'</b>'+
+(st?'<span class="st '+(st==='ok'?'ok':'todo')+'">'+ST[st]+'</span>':'')+(de?'<small>'+de+'</small>':'')+'</div></li>';
+}
+var html='',nav='';
+DAYS.forEach(function(d,i){
+var n=i+1, id='d'+n;
+if(CH[i]){var c=CH[i];html+='<header class="banner '+c[4]+
+'" data-rv><svg class="mj" aria-hidden="true"><use href="#i-momiji"/></svg><span class="no" aria-hidden="true">'+c[0]+'</span><div><span class="bd">'+
+c[2]+'</span><h2>'+c[1]+'</h2><p>'+c[3]+'</p></div></header>';}
+var pills='<span class="pill"><i class="dot" style="background:'+CITY[d.c]+'"></i>'+d.city+'</span>'+(d.tag?'<span class="pill '+d.tag[0]+'">'+
+d.tag[1]+'</span>':'');
+var tips=d.tips.map(function(t){return '<div class="tip'+(t[0]==='warn'?' warn':'')+'">'+ico(t[0]==='warn'?'alert':'info')+'<span>'+t[1]+'</span>' +
+'</div>';}).join('');
+html+='<article class="day'+(i%2?' flip':'')+'" id="'+id+'" aria-labelledby="'+id+'t">'+
+'<div class="media" data-rv><div class="stack'+(d.p[1]?'':' solo')+'"><figure class="ph main">'+img(d.p[0])+'</figure>'+
+(d.p[1]?'<figure class="ph sub">'+img(d.p[1])+'</figure>':'')+'</div><p class="credits">照片：'+d.p.map(credit).join('；')+'</p></div>'+
+'<div class="body" data-rv="2"><div class="day-hd"><span class="day-no">DAY '+(n<10?'0':'')+n+'</span><span class="day-date">'+d.date+'（'+d.dow+
+'）</span>'+pills+'</div>'+
+'<h3 id="'+id+'t">'+d.t+'</h3><p class="lede">'+d.l+'</p><ol class="tl">'+d.it.map(item).join('')+'</ol>'+
+'<div class="meta"><div>'+ico('food')+'<span><em>餐食</em>'+d.food+'</span></div><div>'+ico('bed')+'<span><em>住宿</em>'+d.stay+
+'</span></div></div>'+tips+'</div></article>';
+nav+='<li><a href="#'+id+'" aria-label="DAY '+n+' '+d.date+' '+d.city+'"><b>'+d.date.split('/')[1]+'</b><span>'+d.dow+
+'</span><i style="background:'+CITY[d.c]+'"></i></a></li>';
+});
+D.getElementById('days').innerHTML=html;
+var navOl=D.getElementById('daynav'); navOl.innerHTML=nav;
+/* photo fade-in */
+[].forEach.call(D.querySelectorAll('img[data-l]'),function(im){
+function ok(){im.classList.add('ok');}
+if(im.complete&&im.naturalWidth)ok(); else {im.addEventListener('load',ok);im.addEventListener('error',ok);}
+});
+/* credits */
+D.getElementById('credits').innerHTML=used.map(function(k){var p=PHOTOS[k];
+return '<li>'+esc(p.title.replace(/^File:/,'').replace(/\.[a-z]+$/i,''))+' — '+esc(p.art)+'，<a href="'+p.page+'" target="_blank" rel="noopener">'+
+p.lic+'</a></li>';}).join('');
+/* reveal */
+var rv=D.querySelectorAll('[data-rv]');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{
+rootMargin:'0px 0px -8% 0px',threshold:.08});
+[].forEach.call(rv,function(el){io.observe(el);});
+var links=navOl.querySelectorAll('a'), cur=-1;
+var dio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+var i=+e.target.id.slice(1)-1; if(i===cur)return; cur=i;
+[].forEach.call(links,function(a,j){a.setAttribute('aria-current',j===i?'true':'false');});
+var a=links[i]; navOl.scrollTo({left:a.offsetLeft-navOl.clientWidth/2+a.offsetWidth/2,behavior:'smooth'});
+});},{rootMargin:'-40% 0px -55% 0px'});
+[].forEach.call(D.querySelectorAll('.day'),function(el){dio.observe(el);});
+} else [].forEach.call(rv,function(el){el.classList.add('in');});
+/* header */
+var hdr=D.getElementById('hdr'),tick=false;
+function onScroll(){hdr.classList.toggle('solid',window.scrollY>window.innerHeight*.75);tick=false;}
+window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll);}},{passive:true}); onScroll();
+/* checklist */
+var KEY='autumn2026-checklist-v1';
+var GROUPS=[
+['住宿',[['s1','高松 4 晚（11/17 – 11/21）',1],['s2','岡山 Airbnb 2 晚（11/21 – 11/23）',1],['s3','京都 SMART ＋ Rakuten 4 晚（11/23 – 11/27）',
+1]]],
+['交通',[['t1','研究新幹線時間、JR',1],['t2','買關西廣域周遊券 5 日（KKday／Klook）',0,'tw'],['t3','抵達第一天先劃位（3 段）',0],['t4','大件行李（' +
+'三邊合計超過 160 cm）劃位',0],['t5','幫媽媽買西瓜卡',0],['t6','確認去回程機場巴士時間（11 月時刻表）',0],['t7','京都地鐵・巴士一日券（成人 ¥1,100）',
+0,'tw'],['t8','處理京都\u21d4新大阪段（Pass 不含）',0,'nw'],['t9','決定 Pass 啟用日，11/17、11/27 另外買票',0,'nw']]],
+['四國・岡山',[['k1','研究跳島',1],['k2','直島腳踏車 ougiya 9:00',1],['k3','家計劃・南寺 10:15',1],['k4','地中美術館 14:15',1],['k5','豐島腳踏車 s' +
+'eitouchi 9:30',1],['k6','豐島美術館 12:00',1],['k7','小豆島行程含租車（羊）',1],['k8','倉敷一日遊安排（羊）',1],['k9','倉敷川遊船（羊，10/23 開放' +
+'預約）',0],['k10','姬路攻略與門票（羊）',1]]],
+['京都',[['q1','京都行程安排',0],['q2','Klook 天橋立一日遊',0,'tw'],['q3','嵐山小火車（一個月前開放）',0,'tw'],['q4','找吃的',0],['q5','餐廳訂位（' +
+'羊）',0]]]
+];
+var TAG={tw:['tw','台灣先訂'],nw:['tw nw','新增']};
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||null;}catch(e){return null;}}
+function save(st){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+var groupsEl=D.getElementById('groups'),bar=D.getElementById('bar'),pct=D.getElementById('pct');
+function render(){
+var st=load()||{};
+groupsEl.innerHTML=GROUPS.map(function(g){
+var done=0;
+var rows=g[1].map(function(r){var on=r[0] in st?st[r[0]]:!!r[2]; if(on)done++;
+return '<label class="chk"><input type="checkbox" data-id="'+r[0]+'"'+(on?' checked':'')+'><span>'+r[1]+(r[3]?'<span class="'+TAG[r[3]][0]+'">'+
+TAG[r[3]][1]+'</span>':'')+'</span></label>';}).join('');
+return '<div class="grp"><h3>'+g[0]+'<small>'+done+' / '+g[1].length+'</small></h3>'+rows+'</div>';
+}).join('');
+prog();
+}
+function prog(){
+var all=groupsEl.querySelectorAll('input'),on=groupsEl.querySelectorAll('input:checked').length,v=Math.round(on/all.length*100);
+bar.firstChild.style.width=v+'%'; bar.setAttribute('aria-valuenow',v); pct.textContent=v+'%（'+on+' / '+all.length+'）';
+[].forEach.call(groupsEl.querySelectorAll('.grp'),function(g){g.querySelector('h3 small').textContent=g.querySelectorAll('input:checked').length+
+' / '+g.querySelectorAll('input').length;});
+}
+groupsEl.addEventListener('change',function(e){var t=e.target;if(!t.matches('input'))return;var st=load()||{};st[t.getAttribute('data-id')]=t.checked;
+save(st);prog();});
+D.getElementById('reset').addEventListener('click',function(){try{localStorage.removeItem(KEY);}catch(e){}render();});
+render();
+/* falling leaves */
+var cv=D.getElementById('leaves'),ctx=cv.getContext&&cv.getContext('2d');
+if(!ctx)return;
+var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+var LKEY='autumn2026-leaves',W=0,H=0,DPR=1,L=[],raf=0,last=0;
+var on=(function(){try{return localStorage.getItem(LKEY)!=='off';}catch(e){return true;}})();
+var MAPLE=new Path2D('M0,-48 L8,-26 L22,-34 L18,-14 L40,-20 L30,-4 L46,4 L22,10 L26,24 L6,16 L2,40 L-2,40 L-6,16 L-26,24 L-22,10 L-46,4 L-30,-4 L-4' +
+'0,-20 L-18,-14 L-22,-34 L-8,-26 Z');
+var VEIN=new Path2D('M0,38 L0,-40 M0,10 L-38,-12 M0,10 L38,-12 M0,16 L-22,22 M0,16 L22,22 M0,2 L-18,-28 M0,2 L18,-28');
+var ICHOU=new Path2D('M0,30 C-4,22 -30,8 -40,-16 C-26,-34 -10,-38 -3,-36 L0,-24 L3,-36 C10,-38 26,-34 40,-16 C30,8 4,22 0,30 Z');
+var MC=['#B3341C','#C84A26','#D7692C','#9C2A18','#C25A22','#A8401F'],IC=['#D6A436','#E1B44A','#C99528'];
+function R(a,b){return a+Math.random()*(b-a);}
+function mk(l,init){
+var i=Math.random()<.22; l=l||{};
+l.i=i; l.s=R(.16,.36); l.x=R(0,W); l.y=init?R(-40,H):R(-120,-40);
+l.vy=R(22,46); l.sw=R(18,52); l.f=R(.35,.9); l.ph=R(0,6.28); l.r=R(0,6.28); l.vr=R(-.9,.9);
+l.fl=R(0,6.28); l.vf=R(.7,1.8); l.k=l.k||1; l.c=i?IC[Math.random()*IC.length|0]:MC[Math.random()*MC.length|0]; l.a=R(.6,.92);
+return l;
+}
+function size(){
+W=window.innerWidth;H=window.innerHeight;DPR=Math.min(window.devicePixelRatio||1,2);
+cv.width=Math.round(W*DPR);cv.height=Math.round(H*DPR);
+var n=Math.round(Math.max(10,Math.min(26,W*H/55000)));
+while(L.length<n)L.push(mk(null,true)); L.length=n;
+}
+function draw(l){
+ctx.save();
+ctx.translate(l.x+Math.sin(l.ph)*l.sw,l.y); ctx.rotate(l.r);
+var fx=Math.cos(l.fl); ctx.scale(l.s*(.25+.75*Math.abs(fx)),l.s);
+ctx.globalAlpha=l.a*l.k*(fx<0?.82:1); ctx.fillStyle=l.c;
+if(l.i){ctx.fill(ICHOU);ctx.fillRect(-1.5,28,3,14);}
+else{ctx.fill(MAPLE);ctx.fillRect(-1.8,36,3.6,18);ctx.globalAlpha*=.35;ctx.strokeStyle='#5A160A';ctx.lineWidth=2;ctx.stroke(VEIN);}
+ctx.restore();
+}
+function frame(t){
+var dt=last?Math.min(.05,(t-last)/1000):0; last=t;
+ctx.setTransform(DPR,0,0,DPR,0,0); ctx.clearRect(0,0,W,H);
+var calm=window.scrollY>H*.6, cl=Math.max(0,(W-1160)/2)+Math.min(48,Math.max(20,W*.05))-30, cr=W-cl;
+for(var k=0;k<L.length;k++){var l=L[k];
+l.y+=l.vy*dt; l.ph+=l.f*dt; l.r+=l.vr*dt; l.fl+=l.vf*dt;
+var x=l.x+Math.sin(l.ph)*l.sw, tk=calm&&x>cl&&x<cr?.28:1; l.k+=(tk-l.k)*Math.min(1,dt*3);
+if(l.y>H+60)mk(l,false); draw(l);}
+raf=requestAnimationFrame(frame);
+}
+function still(){ctx.setTransform(DPR,0,0,DPR,0,0);ctx.clearRect(0,0,W,H);if(!on)return;var cl=Math.max(0,(W-1160)/2)+Math.min(48,Math.max(20,
+W*.05))-30;L.forEach(function(l){var x=l.x+Math.sin(l.ph)*l.sw;l.k=x>cl&&x<W-cl?.28:1;draw(l);});}
+function stop(){cancelAnimationFrame(raf);raf=0;last=0;}
+function sync(){
+stop();
+if(mq.matches||!on||D.hidden){still();if(!on){ctx.clearRect(0,0,W,H);}return;}
+raf=requestAnimationFrame(frame);
+}
+var tg=D.getElementById('ltoggle');
+function ui(){tg.setAttribute('aria-pressed',on?'true':'false');tg.querySelector('span').textContent=on?'落葉 開':'落葉 關';
+tg.querySelector('.ico use').setAttribute('href',on?'#i-pause':'#i-play');tg.setAttribute('aria-label',on?'暫停落葉動畫':'開啟落葉動畫');}
+tg.addEventListener('click',function(){on=!on;try{localStorage.setItem(LKEY,on?'on':'off');}catch(e){}ui();sync();});
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){size();if(!raf)still();},150);});
+D.addEventListener('visibilitychange',sync);
+if(mq.addEventListener)mq.addEventListener('change',sync);
+size();ui();sync();
+})();
+</script>
+</body>
+</html>
